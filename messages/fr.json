@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Olin Cycling Experiences — Tour de France 2026",
+    "description": "Une expérience cycliste exclusive de six jours dans les Alpes françaises autour du Tour de France 2026. Du 21 au 26 juillet. Pour dix cyclistes uniquement."
+  },
+  "nav": {
+    "philosophy": "Philosophie",
+    "experience": "L'Expérience",
+    "included": "Inclus",
+    "itinerary": "Itinéraire",
+    "stays": "Hébergements",
+    "about": "À propos",
+    "reserve": "Réserver"
+  },
+  "hero": {
+    "kicker": "Invitation exclusive.",
+    "intro": "Vous recevez ceci parce que quelqu'un qui vous connaît a pensé que votre place était ici. Cette invitation n'est pas publiée. Elle voyage de bouche à oreille.",
+    "brand": "OLIN",
+    "tagline": "Cycling Experiences",
+    "subtitle": "Alpes Françaises — Tour de France 2026 — 21 au 26 juillet",
+    "cta": "Réservez votre place",
+    "ctaSecondary": "Découvrir l'expérience"
+  },
+  "philosophy": {
+    "label": "Philosophie",
+    "title": "Olin",
+    "subtitle": "Cycling Experiences",
+    "body": [
+      "Olin est un mot nahuatl. Il ne signifie pas simplement mouvement.",
+      "Il signifie mouvement intentionnel. Celui qui crée la transformation. Celui qui porte une intention.",
+      "Dans la tradition cosmologique aztèque, Olin est le mouvement en tant que principe cosmique : la force qui anime l'univers et l'acte d'avancer dans le monde avec un but.",
+      "Olin est aussi la racine du mot nahuatl pour cœur, yollotl. Parce que le cœur ne bat pas simplement. Il se meut. Il se transforme. Il propulse.",
+      "C'est ce que nous croyons que le cyclisme peut être."
+    ]
+  },
+  "tourBanner": {
+    "title": "Venez profiter\ndu Tour avec nous"
+  },
+  "intro": {
+    "kicker": "L'Expérience",
+    "title": "Six jours",
+    "body": [
+      "Du 21 au 26 juillet 2026, un petit groupe de dix cyclistes maximum se réunira dans les Alpes françaises pour six jours de vélo, de course et d'expérience partagée autour du Tour de France. Nous aimerions que vous soyez l'un des nôtres.",
+      "Ce n'est pas un voyage pour grands groupes.",
+      "Ce n'est pas un forfait vacances. C'est une semaine soigneusement conçue pour les personnes qui aiment le cyclisme, aiment voyager, et veulent vivre le Tour de France comme il mérite d'être vécu, de l'intérieur."
+    ]
+  },
+  "chalet": {
+    "kicker": "Le Chalet",
+    "title": "Le Chalet d'Oz",
+    "location": "Oz-en-Oisans · Auvergne-Rhône-Alpes",
+    "summary": "Un chalet privé en bois au cœur du massif de l'Oisans, à quelques minutes de l'Alpe d'Huez et des itinéraires des étapes du TDF 2026. Cinq nuits, chambres pour 2–3, jacuzzi et sauna pour la récupération.",
+    "captions": {
+      "exterior": "Le chalet · façade principale",
+      "terrace": "Terrasse en bois · vue sur la montagne",
+      "living": "Salon · cheminée en pierre",
+      "dining": "Salle à manger · grande table pour dix",
+      "kitchen": "Cuisine",
+      "outdoor": "Repas en extérieur",
+      "bedroom": "Chambre · fenêtre sur la vallée",
+      "bedroomAttic": "Chambre mansardée · poutres en bois",
+      "hottub": "Jacuzzi · récupération après la sortie",
+      "sauna": "Sauna"
+    },
+    "viewListing": "Voir l'annonce complète"
+  },
+  "included": {
+    "title": "Tout ce qui est inclus",
+    "intro": "Six choses dont nous nous occupons pour que vous rouliez, regardiez le Tour, et oubliiez le reste.",
+    "features": [
+      {
+        "icon": "flag",
+        "title": "Le Tour",
+        "body": "Visionnage en direct des étapes 18, 19 et 20 — y compris les 21 virages de l'Alpe d'Huez."
+      },
+      {
+        "icon": "home",
+        "title": "Le Chalet",
+        "body": "Cinq nuits dans un chalet privé à Oz. Petit-déjeuner et dîner quotidiens. Jacuzzi chaque soir."
+      },
+      {
+        "icon": "bike",
+        "title": "Roulage",
+        "body": "Trois sorties guidées avec fichiers GPX, assistance mécanique sur route, ravitaillement et hydratation quotidiens. Location de vélo carbone sur demande (500 $)."
+      },
+      {
+        "icon": "compass",
+        "title": "Guides & Coaching",
+        "body": "Guides multilingues (EN / ES / FR / IT). Briefings quotidiens et coaching technique, rythme et ascension."
+      },
+      {
+        "icon": "van",
+        "title": "Transferts",
+        "body": "Van privé depuis Lyon le 21 juillet et retour le 26 juillet."
+      },
+      {
+        "icon": "gift",
+        "title": "Équipement & Soin",
+        "body": "Maillot de membre fondateur Olin. Contrôles vélo après sortie avec kit Wolf Tooth et Park Tool."
+      }
+    ],
+    "items": [
+      "Visionnage en direct des étapes 18, 19 et 20 du TDF",
+      "Six jours / cinq nuits dans le chalet privé à Oz, Auvergne-Rhône-Alpes (21 au 26 juillet)",
+      "Tout l'hébergement",
+      "Petit-déjeuner et dîner quotidiens, y compris les dîners de bienvenue et d'adieu",
+      "Transferts en van privé : prise en charge à Lyon le 21 juillet (9h00) et retour le 26 juillet",
+      "Assistance mécanique complète les jours de vélo — van de soutien, pièces, assistance sur route",
+      "Jacuzzi au chalet disponible chaque soir pour la récupération et la détente",
+      "Guide multilingue toute la semaine (espagnol, anglais, français et italien)",
+      "Briefings d'itinéraire quotidiens et coaching cycliste sur la technique, le rythme et l'ascension",
+      "3 sorties guidées avec fichiers GPX fournis",
+      "Collations, nutrition énergétique et hydratation sur tous les jours de vélo",
+      "Location de vélo en carbone sur demande (frais de location 500 USD) ; vous pouvez aussi apporter votre propre vélo",
+      "Maillot de membre fondateur Olin",
+      "Contrôles vélo après les sorties avec kit Wolf Tooth et Park Tools"
+    ],
+    "note": "Oz est un village de montagne situé au cœur du massif de l'Oisans, à quelques minutes de l'Alpe d'Huez et des routes des étapes 18, 19 et 20 de la plus grande course cycliste du monde. L'hébergement sera partagé en chambres de 2 ou 3 personnes. Si vous souhaitez une chambre privée, elle est disponible moyennant un supplément.",
+    "perk": "De plus, nos dix membres fondateurs bénéficieront d'une réduction de trente pour cent pour l'expérience Olin TDF 2027.",
+    "excluded": "Non inclus : vols internationaux ou trains pour Lyon. Déjeuners les jours de course (cafés locaux et étals de nourriture le long du parcours)."
+  },
+  "itinerary": {
+    "title": "Itinéraire",
+    "days": [
+      {
+        "date": "Lundi 21 juillet",
+        "label": "Arrivée et première sortie",
+        "body": "Votre voyage commence à Lyon — une ville desservie par des vols internationaux et un TGV direct depuis Paris Charles de Gaulle en moins de deux heures. Nous vous récupérons à 9h00 et vous conduisons au chalet. L'après-midi commence par une sortie d'introduction tranquille dans la vallée alpine : une occasion de dégourdir les jambes, admirer le paysage, et trouver votre rythme avec le groupe. Le soir, vos guides vous présentent la semaine à venir autour du dîner."
+      },
+      {
+        "date": "Mardi 22 juillet",
+        "label": "La grande sortie",
+        "body": "Une journée plus longue et plus exigeante en selle. Nous affrontons les cols classiques du massif de l'Oisans — les cols que le peloton professionnel empruntera quelques jours plus tard. Vos guides ouvrent la voie. Le van de soutien suit avec assistance mécanique, collations et hydratation. Le coaching sur le rythme et la technique d'ascension est intégré à la sortie. Le jacuzzi vous attend au chalet à votre retour."
+      },
+      {
+        "date": "Mercredi 23 juillet",
+        "label": "Étape 18 en direct",
+        "body": "Le premier de trois jours consécutifs à suivre le Tour de France en personne. Nous positionnons le groupe à un point stratégique du parcours de l'Étape 18 pour une atmosphère maximale et une proximité avec le peloton. Une sortie légère optionnelle sur une section du parcours le matin vous permet de vous échauffer avant l'arrivée de la course. Votre guide fournit des commentaires tactiques sur la course tout au long de la journée."
+      },
+      {
+        "date": "Jeudi 24 juillet",
+        "label": "Alpe d'Huez et Étape 19",
+        "body": "Le point culminant de la semaine. Nous grimpons les 21 virages en épingle de l'Alpe d'Huez — l'une des ascensions les plus célèbres de tout le cyclisme professionnel, une montagne qui occupe une place dans la mythologie du sport comme aucune autre. Nous montons avant l'arrivée de la course, atteignons le sommet, et prenons position pour voir l'arrivée de l'Étape 19 en direct autour de nous. Peu d'endroits dans le sport produisent ce genre d'atmosphère."
+      },
+      {
+        "date": "Vendredi 25 juillet",
+        "label": "Étape 20 et dîner d'adieu",
+        "body": "Une journée entière dédiée à l'Étape 20 — l'une des étapes de montagne décisives du Tour 2026. Nous maintenons notre position de visionnage, guidés par votre équipe qui sait où la course prend vie. Le soir, nous retournons au chalet pour le dîner d'adieu : une célébration de la semaine, des sorties, et des personnes avec qui vous les avez partagées."
+      },
+      {
+        "date": "Samedi 26 juillet",
+        "label": "Départ",
+        "body": "Après un dernier petit-déjeuner ensemble au chalet, nous vous reconduisons à Lyon. De là, vous continuez vers où le monde vous emmène — emportant avec vous quelque chose que les montagnes ont tendance à laisser derrière."
+      }
+    ]
+  },
+  "whoFor": {
+    "title": "À qui s'adresse cette expérience",
+    "body": [
+      "Olin est conçu pour les cyclistes qui veulent plus que des paysages. Vous n'avez pas besoin d'être un coureur.",
+      "Vous devez aimer être sur un vélo, aimer les montagnes, et vouloir être à l'intérieur du plus grand événement cycliste du monde — pas le regarder sur un écran.",
+      "Les sorties sont structurées pour fonctionner avec une gamme de niveaux. Les guides adaptent les routes et le rythme au groupe. Si vous pouvez tenir une journée complète en selle en terrain de montagne, votre place est ici.",
+      "Nous n'essayons pas de construire quelque chose de grand. Nous essayons de construire quelque chose d'inoubliable."
+    ]
+  },
+  "pricing": {
+    "spotsKicker": "8 places restantes",
+    "ctaBrush": "Réservez votre place",
+    "contactLabel": "à",
+    "contact": "info@olin.bike",
+    "body": [
+      "Olin voyage de bouche à oreille. Il n'y a pas de listing public, pas de publicité, et pas de liste d'attente. Quand dix personnes ont confirmé, le groupe est complet. Des semaines cyclistes curatées comparables dans les Alpes se situent entre 4 500 $ et 7 000 $."
+    ],
+    "priceLabel": "Voici votre prix membre fondateur :",
+    "price": "USD $2,990",
+    "priceSub": "Ce prix est délibérément inférieur à ce qu'Olin facturera lors du lancement complet. Vous êtes invité en tant que membre fondateur — l'une des dix premières personnes à vivre cela, avant que cela existe dans sa forme définitive.",
+    "shape": "Vous contribuez à façonner ce que cela devient.",
+    "shapeBody": "Après le voyage, nous nous assiérons — en personne ou lors d'un appel — et vous demanderons ce qui a fonctionné, ce qui n'a pas fonctionné, et ce qui l'aurait rendu meilleur.",
+    "deposit": "Pour garantir votre place, un dépôt de 1 300 USD est requis. Ce montant est déduit du prix total et est entièrement remboursable jusqu'à 60 jours avant le départ. Il confirme votre place et la maintient jusqu'à ce que le groupe soit complet.",
+    "reply": "Répondez à la personne qui vous a partagé cette invitation, ou contactez-nous directement pour confirmer votre intérêt. Nous vous enverrons les prochaines étapes."
+  },
+  "about": {
+    "title": "Qui sommes-nous",
+    "body": [
+      "Olin est dirigé par Augusto et Rodrigo — deux cyclistes qui ont passé des années en selle à travers la France, l'Italie, l'Espagne, le Royaume-Uni, les États-Unis, Singapour, le Japon et l'Amérique latine.",
+      "Augusto a personnellement guidé des groupes à travers le Tour de France, la Vuelta a España et le Giro d'Italia.",
+      "Rodrigo apporte près d'une décennie en tant que Superhost Airbnb, technicien vélo certifié par la Bicycle Industry Employers Association, et membre Rapha qui a visité des boutiques phares à travers le monde.",
+      "Ensemble, ils ont couru des critériums à New York dans des équipes qui détenaient des titres de maillots locaux. Ils n'ont pas construit Olin comme une idée d'entreprise. Ils l'ont construit parce que c'est le voyage qu'ils ont toujours voulu faire — et maintenant, ils invitent dix personnes à le faire avec eux."
+    ],
+    "partners": ["Rapha", "Airbnb Superhost", "Wolf Tooth", "Park Tool", "BIEA"],
+    "inGoodCompany": "En bonne compagnie"
+  },
+  "quote": {
+    "text": "Nahui Olin. L'ère du mouvement intentionnel. Le cœur qui bouge, transforme."
+  },
+  "footer": {
+    "brand": "Olin Cycling Experiences",
+    "tagline": "Alpes Françaises — Tour de France 2026 — 21 au 26 juillet",
+    "contact": "info@olin.bike",
+    "rights": "Tous droits réservés.",
+    "invitation": "Sur invitation uniquement."
+  },
+  "language": {
+    "label": "Langue",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français"
+  }
+}

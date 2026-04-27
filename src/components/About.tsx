@@ -1,60 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-type Partner = {
-  name: string;
-  logo?: string;
-  href: string;
-  width: number; // source aspect reference
-  height: number;
-  // display height in rem (Tailwind h-*)
-  display: string;
-};
-
-// Real partner logos (PNG with transparent backgrounds)
-const PARTNERS: Partner[] = [
-  {
-    name: 'Rapha',
-    logo: '/images/partners/rapha.png',
-    href: 'https://www.rapha.cc/',
-    width: 500,
-    height: 245,
-    display: 'h-7 sm:h-8',
-  },
-  {
-    name: 'Airbnb Superhost',
-    logo: '/images/partners/airbnb.png',
-    href: 'https://www.airbnb.com/',
-    width: 500,
-    height: 160,
-    display: 'h-7 sm:h-8',
-  },
-  {
-    name: 'Wolf Tooth',
-    logo: '/images/partners/wolf-tooth.png',
-    href: 'https://www.wolftoothcomponents.com/',
-    width: 400,
-    height: 86,
-    display: 'h-5 sm:h-6',
-  },
-  {
-    name: 'Park Tool',
-    logo: '/images/partners/park-tool.png',
-    href: 'https://www.parktool.com/',
-    width: 500,
-    height: 300,
-    display: 'h-10 sm:h-12',
-  },
-  {
-    name: 'BIEA',
-    logo: '/images/partners/biea.png',
-    href: 'https://www.biea.bike/',
-    width: 750,
-    height: 212,
-    display: 'h-6 sm:h-7',
-  },
-];
-
 export function About() {
   const t = useTranslations('about');
   const body = t.raw('body') as string[];
@@ -117,42 +63,6 @@ export function About() {
                 {p}
               </p>
             ))}
-          </div>
-
-          <div className="mt-12 border-t border-paper-line pt-8">
-            <p className="kicker mb-6 text-paper-muted">
-              {t('inGoodCompany')}
-            </p>
-            <div className="space-y-8">
-              {[PARTNERS.slice(0, 3), PARTNERS.slice(3)].map((row, ri) => (
-                <div
-                  key={ri}
-                  className="flex flex-wrap items-center justify-start gap-x-10 gap-y-6 sm:gap-x-14"
-                >
-                  {row.map((p) =>
-                    p.logo ? (
-                      <a
-                        key={p.name}
-                        href={p.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={p.name}
-                        className="relative flex items-center opacity-70 transition-opacity hover:opacity-100"
-                        title={p.name}
-                      >
-                        <Image
-                          src={p.logo}
-                          alt={p.name}
-                          width={p.width}
-                          height={p.height}
-                          className={`${p.display} w-auto object-contain`}
-                        />
-                      </a>
-                    ) : null,
-                  )}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

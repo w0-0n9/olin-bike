@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { OlinMark } from './OlinMark';
 
 export function Hero() {
@@ -7,33 +6,14 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-navy-deep pb-28 pt-24 sm:pb-32 sm:pt-32">
-      {/* Cinematic Tour de France peloton backdrop */}
-      <Image
-        src="/images/peloton.jpg"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover opacity-45"
-      />
-
-      {/* Cinematic dark overlay — stronger for peloton legibility */}
-      <div
-        aria-hidden
-        className="absolute inset-0"
-        style={{
-          background:
-            'linear-gradient(180deg, rgba(10,12,28,0.82) 0%, rgba(10,12,28,0.55) 35%, rgba(10,12,28,0.72) 70%, rgba(10,12,28,0.92) 100%)',
-        }}
-      />
-
-      {/* Yellow accent glow (TdF yellow jersey feel) */}
+      {/* Solid PDF cover block — same dark navy as the printed invitation */}
+      {/* Soft yellow accent glow (TdF yellow jersey feel) */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse at 50% 75%, rgba(240,230,90,0.14), transparent 55%)',
+            'radial-gradient(ellipse at 50% 75%, rgba(240,230,90,0.10), transparent 60%)',
         }}
       />
 
@@ -62,7 +42,7 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
-          <a href="#reserve" className="btn-accent">
+          <a href="/book" className="btn-accent">
             {t('cta')}
           </a>
           <a href="#experience" className="btn-ghost-dark">

@@ -6,6 +6,7 @@ import { Experience } from '@/components/Experience';
 import { Included } from '@/components/Included';
 import { ChaletGallery } from '@/components/ChaletGallery';
 import { Itinerary } from '@/components/Itinerary';
+import { InGoodCompany } from '@/components/InGoodCompany';
 import { WhoFor } from '@/components/WhoFor';
 import { About } from '@/components/About';
 import { Reserve } from '@/components/Reserve';
@@ -26,6 +27,7 @@ export default async function HomePage({
       <TourBanner />
       <Experience />
       <Included />
+      <InGoodCompany />
       <Itinerary />
       <ChaletGallery />
       <WhoFor />

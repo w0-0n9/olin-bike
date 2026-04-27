@@ -14,6 +14,8 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
+// Caveat stays as a graceful fallback while the Adobe Fonts (Flood Std)
+// kit loads — and if the kit is not configured.
 const caveat = Caveat({
   subsets: ['latin'],
   variable: '--font-caveat',
@@ -26,6 +28,8 @@ export const metadata: Metadata = {
   description: 'An exclusive cycling experience around the Tour de France 2026.',
 };
 
+const adobeFontsKitId = process.env.NEXT_PUBLIC_ADOBE_FONTS_KIT_ID;
+
 export default function RootLayout({
   children,
 }: {
@@ -33,6 +37,14 @@ export default function RootLayout({
 }) {
   return (
     <html className={`${inter.variable} ${playfair.variable} ${caveat.variable}`}>
+      <head>
+        {adobeFontsKitId ? (
+          <link
+            rel="stylesheet"
+            href={`https://use.typekit.net/${adobeFontsKitId}.css`}
+          />
+        ) : null}
+      </head>
       <body>{children}</body>
     </html>
   );

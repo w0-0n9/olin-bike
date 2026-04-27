@@ -14,7 +14,7 @@
   },
   "hero": {
     "kicker": "You are exclusively invited.",
-    "intro": "You are receiving this because someone who knows you thought you belonged here. This invitation is not advertised. It travels by word of mouth.",
+    "intro": "Welcome to a cycling experience of a lifetime.",
     "brand": "OLIN",
     "tagline": "Cycling Experiences",
     "subtitle": "French Alps — Tour de France 2026 — July 21–26",
@@ -55,14 +55,12 @@
       "terrace": "Wooden terrace · mountain view",
       "living": "Living room · stone fireplace",
       "dining": "Dining · long table for ten",
-      "kitchen": "Kitchen",
       "outdoor": "Outdoor dining",
       "bedroom": "Bedroom · valley window",
       "bedroomAttic": "Attic bedroom · wood beams",
       "hottub": "Hot tub · after-ride recovery",
       "sauna": "Sauna"
-    },
-    "viewListing": "View the full listing"
+    }
   },
   "included": {
     "title": "Everything that's included",
@@ -71,7 +69,7 @@
       {
         "icon": "flag",
         "title": "The Tour",
-        "body": "Live viewing of Stages 18, 19 and 20 — including the 21 bends of Alpe d'Huez."
+        "body": "Live viewing of Stages 18, 19 and 20 — including the bends of Alpe d'Huez."
       },
       {
         "icon": "home",
@@ -164,7 +162,10 @@
     ]
   },
   "pricing": {
-    "spotsKicker": "8 spots remaining",
+    "spotsKicker": "{count} spots remaining",
+    "spotsLabel": "spots remaining",
+    "outOfTotal": "of {total} total",
+    "payNow": "Reserve with deposit",
     "ctaBrush": "Reserve your place",
     "contactLabel": "at",
     "contact": "info@olin.bike",
@@ -205,5 +206,44 @@
     "en": "English",
     "es": "Español",
     "fr": "Français"
+  },
+  "book": {
+    "title": "Reserve your place",
+    "subtitle": "Founding member · Tour de France 2026 · July 21–26",
+    "spotsLeft": "{count} spots remaining",
+    "contact": "Your details",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone number",
+    "bikeTitle": "Bike option",
+    "bikeOwn": "I'll bring my own bike",
+    "bikeRental": "Carbon bike rental",
+    "bikeSize": "Frame size (cm)",
+    "pedalType": "Pedal type",
+    "roomTitle": "Room preference",
+    "roomShared": "Shared bedroom (2–3 people)",
+    "roomPrivate": "Private bedroom",
+    "priceSummary": "Price summary",
+    "baseFee": "Founding member fee",
+    "bikeRentalFee": "Carbon bike rental",
+    "privateRoomFee": "Private bedroom",
+    "total": "Total",
+    "deposit": "Deposit (today)",
+    "balance": "Balance (30 days before departure)",
+    "depositNote": "Your deposit is fully refundable up to 60 days before departure.",
+    "payDeposit": "Pay deposit",
+    "securedBy": "Secured by Stripe",
+    "processing": "Redirecting to payment..."
+  },
+  "confirmation": {
+    "title": "You're in.",
+    "subtitle": "Your place is confirmed",
+    "body": "We've received your deposit. You'll receive a confirmation email shortly with next steps — including your pre-trip questionnaire.",
+    "summary": "Booking summary",
+    "depositPaid": "Deposit paid",
+    "balanceDue": "Balance due by",
+    "balanceDate": "June 21, 2026",
+    "contact": "Questions? Reach us at",
+    "backHome": "Back to home"
   }
 }

@@ -75,7 +75,7 @@ export function Navigation() {
         <div className="flex items-center gap-4 sm:gap-6">
           <LanguageSwitcher dark={!scrolled} />
           <a
-            href="#reserve"
+            href="/book"
             className={cn(
               'hidden sm:inline-flex items-center justify-center gap-2 rounded-none px-6 py-2.5 text-xs font-semibold uppercase tracking-wider2 transition-all',
               scrolled
@@ -136,7 +136,7 @@ export function Navigation() {
             </a>
           ))}
           <a
-            href="#reserve"
+            href="/book"
             onClick={() => setOpen(false)}
             className="btn-primary self-start"
           >

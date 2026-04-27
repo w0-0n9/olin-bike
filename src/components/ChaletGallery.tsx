@@ -11,7 +11,6 @@ type CaptionKey =
   | 'terrace'
   | 'living'
   | 'dining'
-  | 'kitchen'
   | 'outdoor'
   | 'bedroom'
   | 'bedroomAttic'
@@ -31,7 +30,6 @@ const PHOTOS: Photo[] = [
   { src: '/images/chalet/bedroom-view.jpg', captionKey: 'bedroom', aspect: 'landscape' },
   { src: '/images/chalet/hottub.jpg', captionKey: 'hottub', aspect: 'portrait' },
   { src: '/images/chalet/outdoor-dining.jpg', captionKey: 'outdoor', aspect: 'landscape' },
-  { src: '/images/chalet/kitchen.jpg', captionKey: 'kitchen', aspect: 'landscape' },
   { src: '/images/chalet/exterior-terrace.jpg', captionKey: 'terrace', aspect: 'landscape' },
   { src: '/images/chalet/sauna.jpg', captionKey: 'sauna', aspect: 'portrait' },
 ];
@@ -142,28 +140,6 @@ export function ChaletGallery() {
           })}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href="https://www.vrbo.com/2359802"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-ghost"
-          >
-            {t('viewListing')}
-            <svg
-              viewBox="0 0 24 24"
-              className="h-3.5 w-3.5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M7 17L17 7M17 7H9M17 7v8" strokeLinecap="round" />
-            </svg>
-          </a>
-          <p className="text-xs text-paper-muted">
-            Photos: VRBO listing 2359802
-          </p>
-        </div>
       </div>
 
       {/* Lightbox */}

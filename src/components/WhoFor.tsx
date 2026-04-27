@@ -44,15 +44,6 @@ export function WhoFor() {
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
-          {/* Vertical OLIN brush text overlay */}
-          <div className="pointer-events-none absolute inset-0 flex items-end justify-end p-10">
-            <span
-              className="brush text-7xl leading-none text-accent drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] sm:text-8xl"
-              style={{ writingMode: 'vertical-rl' }}
-            >
-              OLIN
-            </span>
-          </div>
           <div
             aria-hidden
             className="absolute inset-0"

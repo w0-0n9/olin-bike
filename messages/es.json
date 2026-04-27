@@ -14,7 +14,7 @@
   },
   "hero": {
     "kicker": "Invitación exclusiva.",
-    "intro": "Estás exclusivamente invitado. Recibes esto porque alguien que te conoce pensó que pertenecías aquí. Esta invitación no se publicita, viaja de boca en boca.",
+    "intro": "Bienvenido a una experiencia ciclista única en la vida.",
     "brand": "OLIN",
     "tagline": "Cycling Experiences",
     "subtitle": "Alpes Franceses — Tour de Francia 2026 — 21 al 26 de julio",
@@ -55,14 +55,12 @@
       "terrace": "Terraza de madera · vista a la montaña",
       "living": "Sala · chimenea de piedra",
       "dining": "Comedor · mesa larga para diez",
-      "kitchen": "Cocina",
       "outdoor": "Comedor exterior",
       "bedroom": "Dormitorio · ventana al valle",
       "bedroomAttic": "Dormitorio ático · vigas de madera",
       "hottub": "Jacuzzi · recuperación después del pedaleo",
       "sauna": "Sauna"
-    },
-    "viewListing": "Ver el anuncio completo"
+    }
   },
   "included": {
     "title": "Todo lo que está incluido",
@@ -71,7 +69,7 @@
       {
         "icon": "flag",
         "title": "El Tour",
-        "body": "Visualización en vivo de las etapas 18, 19 y 20, incluidas las 21 curvas de Alpe d'Huez."
+        "body": "Visualización en vivo de las etapas 18, 19 y 20, incluidas las curvas de Alpe d'Huez."
       },
       {
         "icon": "home",
@@ -164,7 +162,10 @@
     ]
   },
   "pricing": {
-    "spotsKicker": "8 lugares restantes",
+    "spotsKicker": "{count} lugares restantes",
+    "spotsLabel": "lugares restantes",
+    "outOfTotal": "de {total} en total",
+    "payNow": "Reserva con depósito",
     "ctaBrush": "Reserva tu lugar",
     "contactLabel": "en",
     "contact": "info@olin.bike",
@@ -205,5 +206,44 @@
     "en": "English",
     "es": "Español",
     "fr": "Français"
+  },
+  "book": {
+    "title": "Reserva tu lugar",
+    "subtitle": "Miembro fundador · Tour de Francia 2026 · 21 al 26 de julio",
+    "spotsLeft": "{count} lugares restantes",
+    "contact": "Tus datos",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "phone": "Número de teléfono",
+    "bikeTitle": "Opción de bicicleta",
+    "bikeOwn": "Llevo mi propia bici",
+    "bikeRental": "Alquiler de bici de carbono",
+    "bikeSize": "Talla del cuadro (cm)",
+    "pedalType": "Tipo de pedal",
+    "roomTitle": "Preferencia de habitación",
+    "roomShared": "Habitación compartida (2–3 personas)",
+    "roomPrivate": "Habitación privada",
+    "priceSummary": "Resumen de precio",
+    "baseFee": "Tarifa miembro fundador",
+    "bikeRentalFee": "Alquiler bici de carbono",
+    "privateRoomFee": "Habitación privada",
+    "total": "Total",
+    "deposit": "Depósito (hoy)",
+    "balance": "Saldo (30 días antes de la salida)",
+    "depositNote": "Tu depósito es reembolsable hasta 60 días antes de la salida.",
+    "payDeposit": "Pagar depósito",
+    "securedBy": "Protegido por Stripe",
+    "processing": "Redirigiendo al pago..."
+  },
+  "confirmation": {
+    "title": "Estás dentro.",
+    "subtitle": "Tu lugar está confirmado",
+    "body": "Hemos recibido tu depósito. Recibirás un correo de confirmación con los próximos pasos, incluyendo el cuestionario previo al viaje.",
+    "summary": "Resumen de reserva",
+    "depositPaid": "Depósito pagado",
+    "balanceDue": "Saldo a pagar antes del",
+    "balanceDate": "21 de junio de 2026",
+    "contact": "¿Preguntas? Escríbenos a",
+    "backHome": "Volver al inicio"
   }
 }

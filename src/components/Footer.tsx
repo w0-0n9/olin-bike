@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { OlinMark } from './OlinMark';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/config';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -28,6 +29,26 @@ export function Footer() {
               className="text-sm text-ink hover:text-accent-deep"
             >
               {t('contact')}
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-ink hover:text-accent-deep"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              @{INSTAGRAM_HANDLE}
             </a>
             <p className="mt-2 text-xs text-paper-muted">{t('invitation')}</p>
           </div>

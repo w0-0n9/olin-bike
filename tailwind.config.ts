@@ -35,7 +35,7 @@ const config: Config = {
       },
       fontFamily: {
         display: ['var(--font-playfair)', 'serif'],
-        brush: ['var(--font-caveat)', 'cursive'],
+        brush: ['flood-std', 'var(--font-caveat)', 'cursive'],
         body: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {

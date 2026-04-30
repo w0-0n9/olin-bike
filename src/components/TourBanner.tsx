@@ -33,6 +33,19 @@ export function TourBanner() {
               'radial-gradient(ellipse at 30% 20%, rgba(240,230,90,0.15) 0%, transparent 50%)',
           }}
         />
+        {/* Tour de France lockup — bottom right, mirrors the PDF placement */}
+        <div className="absolute bottom-6 right-6 z-10 sm:bottom-10 sm:right-10">
+          <div className="bg-paper-light/90 px-4 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
+            <Image
+              src="/images/partners/tour-de-france.png"
+              alt="Tour de France 2026"
+              width={1061}
+              height={860}
+              sizes="(min-width: 768px) 8rem, 5rem"
+              className="h-12 w-auto sm:h-14 md:h-16"
+            />
+          </div>
+        </div>
         <div className="relative z-10 flex h-full items-start">
           <div className="container-max pt-10 sm:pt-16">
             <h2

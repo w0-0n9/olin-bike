@@ -41,7 +41,7 @@ export function TourBanner() {
               alt="Tour de France 2026"
               width={1061}
               height={860}
-              sizes="(min-width: 768px) 8rem, 5rem"
+              sizes="(min-width: 768px) 5rem, 4rem"
               className="h-12 w-auto sm:h-14 md:h-16"
             />
           </div>

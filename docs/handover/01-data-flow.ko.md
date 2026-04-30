@@ -45,7 +45,7 @@
 
 ## 3. 지금 **없는 것** (의도된 한계)
 
-코드 안에 두 줄짜리 `// TODO` 주석으로 남아 있는, 아직 만들지 않은 기능이 두 가지 있습니다. 위치는 `src/app/api/stripe/webhook/route.ts` 26번째 줄 근처입니다.
+코드 안에 두 줄짜리 `// TODO` 주석으로 남아 있는, 아직 만들지 않은 기능이 두 가지 있습니다. 위치는 `src/app/api/stripe/webhook/route.ts` 24–25번째 줄입니다.
 
 ```ts
 // TODO: Store booking in database (Supabase)

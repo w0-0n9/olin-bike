@@ -48,7 +48,7 @@ DNS 변경은 인터넷 전체에 퍼지는 데 시간이 걸립니다(이걸 "D
    [Stripe 대시보드](https://dashboard.stripe.com) → Workbench → Webhooks → 기존 destination 편집 → URL을 `https://olin.bike/api/stripe/webhook`으로 변경 → 저장. 그 후 "Send test event" 버튼으로 한 번 테스트하셔서 응답이 200으로 오는지 확인하시는 게 좋습니다.
 
 3. **Adobe Fonts 도메인 화이트리스트 추가**
-   브러시 글꼴(Flood Std)은 Adobe Fonts에서 받아옵니다. Adobe Fonts → My Fonts → 해당 키트(`lze3zjz`) → Domains → `olin.bike`, `www.olin.bike` 추가. **이걸 빠뜨리면 헤드라인의 손글씨 느낌이 깨지고 다른 폰트로 대체되어 표시됩니다.**
+   브러시 글꼴(Flood Std)은 Adobe Fonts에서 받아옵니다. 사용 중인 키트 ID는 Vercel 환경변수 `NEXT_PUBLIC_ADOBE_FONTS_KIT_ID`에 저장돼 있습니다. 그 값으로 Adobe Fonts → My Fonts에서 해당 키트를 찾아 → Domains → `olin.bike`, `www.olin.bike`를 추가. **이걸 빠뜨리면 헤드라인의 손글씨 느낌이 깨지고 다른 폰트로 대체되어 표시됩니다.**
 
 4. **Instagram bio 링크**
    Instagram 프로필의 링크도 새 도메인으로 바꿔주시면 깔끔합니다.

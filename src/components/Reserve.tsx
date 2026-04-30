@@ -46,7 +46,7 @@ export function Reserve() {
           </div>
 
           {/* Stripe-secured payment button — sits right under the counter */}
-          <a
+          <Link
             href="/book"
             className="btn-accent mt-8"
           >
@@ -60,7 +60,7 @@ export function Reserve() {
             >
               <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-          </a>
+          </Link>
           <p className="mt-3 flex items-center gap-2 text-[10px] uppercase tracking-wider2 text-paper/55">
             <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2">
               <rect x="3" y="11" width="18" height="10" rx="2" />

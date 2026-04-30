@@ -5,7 +5,7 @@ import { usePathname, useRouter } from '@/i18n/routing';
 import { useTransition } from 'react';
 import { cn } from '@/lib/utils';
 
-const LOCALES = ['en', 'es', 'fr'] as const;
+const LOCALES = ['en', 'es', 'fr', 'ko'] as const;
 
 export function LanguageSwitcher({
   compact = false,

@@ -11,6 +11,6 @@ export const TOTAL_SPOTS = 10;
 
 // Instagram handle (without the @). Update via NEXT_PUBLIC_INSTAGRAM_HANDLE.
 export const INSTAGRAM_HANDLE: string =
-  process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE || 'olin.bike';
+  process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE || 'olincycle';
 
 export const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;

@@ -28,10 +28,10 @@ const PHOTOS: Photo[] = [
   { src: '/images/chalet/living.jpg', captionKey: 'living', aspect: 'landscape' },
   { src: '/images/chalet/dining.jpg', captionKey: 'dining', aspect: 'landscape' },
   { src: '/images/chalet/bedroom-view.jpg', captionKey: 'bedroom', aspect: 'landscape' },
-  { src: '/images/chalet/hottub.jpg', captionKey: 'hottub', aspect: 'portrait' },
+  { src: '/images/chalet/hottub.jpg', captionKey: 'hottub', aspect: 'square' },
   { src: '/images/chalet/outdoor-dining.jpg', captionKey: 'outdoor', aspect: 'landscape' },
   { src: '/images/chalet/exterior-terrace.jpg', captionKey: 'terrace', aspect: 'landscape' },
-  { src: '/images/chalet/sauna.jpg', captionKey: 'sauna', aspect: 'portrait' },
+  { src: '/images/chalet/sauna.jpg', captionKey: 'sauna', aspect: 'square' },
 ];
 
 export function ChaletGallery() {

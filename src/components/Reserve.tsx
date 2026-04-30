@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { OlinMark } from './OlinMark';
 import { SPOTS_REMAINING, TOTAL_SPOTS } from '@/lib/config';
 
@@ -117,9 +118,9 @@ export function Reserve() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
-            <a href="/book" className="btn-accent">
+            <Link href="/book" className="btn-accent">
               {t('ctaBrush')}
-            </a>
+            </Link>
             <a
               href={`mailto:${t('contact')}`}
               className="text-sm text-paper/60 underline-offset-4 hover:text-accent hover:underline"

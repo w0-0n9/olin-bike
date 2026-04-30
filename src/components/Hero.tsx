@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { OlinMark } from './OlinMark';
 
 export function Hero() {
@@ -42,12 +43,12 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
-          <a href="/book" className="btn-accent">
+          <Link href="/book" className="btn-accent">
             {t('cta')}
-          </a>
-          <a href="#experience" className="btn-ghost-dark">
+          </Link>
+          <Link href={{ pathname: '/', hash: 'experience' }} className="btn-ghost-dark">
             {t('ctaSecondary')}
-          </a>
+          </Link>
         </div>
       </div>
 

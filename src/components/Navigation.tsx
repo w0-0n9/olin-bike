@@ -20,11 +20,11 @@ export function Navigation() {
   }, []);
 
   const links = [
-    { href: '#experience', label: t('experience') },
-    { href: '#included', label: t('included') },
-    { href: '#itinerary', label: t('itinerary') },
-    { href: '#chalet', label: t('stays') },
-    { href: '#about', label: t('about') },
+    { hash: 'experience', label: t('experience') },
+    { hash: 'included', label: t('included') },
+    { hash: 'itinerary', label: t('itinerary') },
+    { hash: 'chalet', label: t('stays') },
+    { hash: 'about', label: t('about') },
   ];
 
   return (
@@ -57,9 +57,9 @@ export function Navigation() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+            <Link
+              key={l.hash}
+              href={{ pathname: '/', hash: l.hash }}
               className={cn(
                 'text-xs uppercase tracking-wider2 transition-colors',
                 scrolled
@@ -68,13 +68,13 @@ export function Navigation() {
               )}
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-4 sm:gap-6">
           <LanguageSwitcher dark={!scrolled} />
-          <a
+          <Link
             href="/book"
             className={cn(
               'hidden sm:inline-flex items-center justify-center gap-2 rounded-none px-6 py-2.5 text-xs font-semibold uppercase tracking-wider2 transition-all',
@@ -84,7 +84,7 @@ export function Navigation() {
             )}
           >
             {t('reserve')}
-          </a>
+          </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -126,22 +126,22 @@ export function Navigation() {
       >
         <nav className="container-max flex flex-col gap-6 py-8">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+            <Link
+              key={l.hash}
+              href={{ pathname: '/', hash: l.hash }}
               onClick={() => setOpen(false)}
               className="text-sm uppercase tracking-wider2 text-ink-soft"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="/book"
             onClick={() => setOpen(false)}
             className="btn-primary self-start"
           >
             {t('reserve')}
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

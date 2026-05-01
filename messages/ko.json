@@ -68,32 +68,32 @@
     "features": [
       {
         "icon": "flag",
-        "title": "투르",
+        "title": "The Tour",
         "body": "스테이지 18·19·20을 현장에서 함께. Alpe d'Huez의 굽이굽이도 그 안에 있습니다."
       },
       {
         "icon": "home",
-        "title": "샬레",
+        "title": "The Chalet",
         "body": "Oz의 프라이빗 샬레에서 5박. 아침과 저녁 식사 매일 제공. 저녁마다 핫텁."
       },
       {
         "icon": "bike",
-        "title": "라이딩",
+        "title": "Riding",
         "body": "GPX 파일을 함께 받는 가이드 라이딩 3회. 도로 위 미캐닉 지원, 매일의 영양과 수분 보급. 카본 자전거는 요청 시 렌탈 가능 ($500)."
       },
       {
         "icon": "compass",
-        "title": "가이드 & 코칭",
+        "title": "Guides & Coaching",
         "body": "영어·스페인어·프랑스어·이탈리아어 가이드. 매일 일정 브리핑과 함께 테크닉·페이스·클라이밍 코칭."
       },
       {
         "icon": "van",
-        "title": "이동 지원",
+        "title": "Transfers",
         "body": "7월 21일 Lyon에서 프라이빗 밴으로 픽업, 26일에 다시 같은 자리로 모셔다드립니다."
       },
       {
         "icon": "gift",
-        "title": "기어 & 케어",
+        "title": "Gear & Care",
         "body": "Olin 창립 멤버 저지. 라이딩이 끝나면 Wolf Tooth와 Park Tool 키트로 자전거를 점검해 드립니다."
       }
     ],

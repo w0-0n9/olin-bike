@@ -233,7 +233,19 @@
     "depositNote": "Tu depósito es reembolsable hasta 60 días antes de la salida.",
     "payDeposit": "Pagar depósito",
     "securedBy": "Protegido por Stripe",
-    "processing": "Redirigiendo al pago..."
+    "processing": "Redirigiendo al pago...",
+    "consent": {
+      "title": "Antes de reservar, confirma lo siguiente:",
+      "requiredLabel": "(obligatorio)",
+      "waiver": "He leído y acepto la <link>Exención del Participante</link>, incluyendo la Asunción de Riesgo y la Exención de Responsabilidad. Confirmo que soy mayor de 18 años y estoy en buena condición física para participar.",
+      "insurance": "Confirmo que dispongo, u obtendré antes de la salida, un seguro de viaje válido que cubra actividades ciclistas en Francia, incluida la evacuación médica de emergencia.",
+      "privacy": "Acepto la <link>Política de Privacidad</link> y consiento que Olin trate mis datos de reserva (nombre, datos de contacto, contacto de emergencia, notas médicas) con el fin de prestar esta experiencia.",
+      "cancellation": "He leído y acepto la <link>Política de Cancelación y Reembolso</link>.",
+      "optionalIntro": "Opcional — puedes cambiar de opinión en cualquier momento escribiendo a info@olin.bike:",
+      "feedback": "Doy mi consentimiento para que Olin me contacte tras el viaje para recoger opiniones (una llamada breve o un cuestionario escrito, sin marketing).",
+      "media": "Doy mi consentimiento para que Olin utilice fotos y vídeos en los que aparezco, captados durante el viaje, con fines promocionales (web, redes sociales, futuras invitaciones). Puedo retirar este consentimiento en cualquier momento.",
+      "helperHint": "Marca todas las casillas obligatorias para activar el pago."
+    }
   },
   "confirmation": {
     "title": "Estás dentro.",

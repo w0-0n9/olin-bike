@@ -21,7 +21,9 @@ export async function POST(req: NextRequest) {
         const session = event.data.object;
         const meta = session.metadata;
 
-        // TODO: Store booking in database (Supabase)
+        // TODO: Store booking + consents in database (Supabase). Each consent
+        // should land in its own row keyed by sessionId so per-consent
+        // withdrawals (e.g. media consent) can be tracked independently.
         // TODO: Send confirmation email (Resend)
         console.log('✅ Booking confirmed:', {
           name: meta?.booking_name,
@@ -30,6 +32,17 @@ export async function POST(req: NextRequest) {
           privateRoom: meta?.private_room,
           total: meta?.total_cents,
           sessionId: session.id,
+          consents: {
+            policyVersion: meta?.consent_policy_version,
+            waiverAt: meta?.consent_waiver_at,
+            insuranceAt: meta?.consent_insurance_at,
+            privacyAt: meta?.consent_privacy_at,
+            cancellationAt: meta?.consent_cancellation_at,
+            feedbackAt: meta?.consent_feedback_at || null,
+            mediaAt: meta?.consent_media_at || null,
+            userAgent: meta?.consent_user_agent,
+            ip: meta?.consent_ip,
+          },
         });
         break;
       }

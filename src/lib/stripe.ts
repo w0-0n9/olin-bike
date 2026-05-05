@@ -30,6 +30,21 @@ export const PEDAL_TYPES = ['SPD-SL', 'SPD', 'Look Keo', 'Flat'] as const;
 export type BikeSize = (typeof BIKE_SIZES)[number];
 export type PedalType = (typeof PEDAL_TYPES)[number];
 
+// GDPR consent shape submitted from the booking form. The four required
+// consents must be true before the deposit button is enabled. The two
+// optional consents may be false. `at` is an ISO timestamp captured client-side
+// at submit time, persisted into Stripe metadata so each consent is auditable
+// against the resulting checkout session.
+export type BookingConsents = {
+  waiver: boolean;
+  insurance: boolean;
+  privacy: boolean;
+  cancellation: boolean;
+  feedback: boolean;
+  media: boolean;
+  at: string;
+};
+
 export type BookingOptions = {
   name: string;
   email: string;
@@ -39,7 +54,15 @@ export type BookingOptions = {
   pedalType?: PedalType;
   privateRoom: boolean;
   locale: string;
+  consents: BookingConsents;
 };
+
+export const REQUIRED_CONSENT_KEYS = [
+  'waiver',
+  'insurance',
+  'privacy',
+  'cancellation',
+] as const;
 
 export function calculateTotal(opts: { bikeRental: boolean; privateRoom: boolean }) {
   let total = PRICING.BASE_FEE;

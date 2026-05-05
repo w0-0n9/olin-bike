@@ -233,7 +233,19 @@
     "depositNote": "Your deposit is fully refundable up to 60 days before departure.",
     "payDeposit": "Pay deposit",
     "securedBy": "Secured by Stripe",
-    "processing": "Redirecting to payment..."
+    "processing": "Redirecting to payment...",
+    "consent": {
+      "title": "Before you reserve, please confirm:",
+      "requiredLabel": "(required)",
+      "waiver": "I have read and agree to the <link>Participant Waiver</link>, including the Assumption of Risk and Release of Liability. I confirm I am over 18 and physically fit to participate.",
+      "insurance": "I confirm I hold, or will obtain before departure, valid travel insurance covering cycling activities in France, including emergency medical evacuation.",
+      "privacy": "I agree to the <link>Privacy Policy</link> and consent to Olin processing my booking data (name, contact details, emergency contact, medical notes) for the purpose of delivering this experience.",
+      "cancellation": "I have read and agree to the <link>Cancellation & Refund Policy</link>.",
+      "optionalIntro": "Optional — you can change your mind anytime by emailing info@olin.bike:",
+      "feedback": "I consent to Olin contacting me after the trip for feedback (one short call or written survey, no marketing).",
+      "media": "I consent to Olin using photos and video that include me, captured during the trip, for promotional purposes (website, social media, future invitations). I can withdraw this consent at any time.",
+      "helperHint": "Please tick all required boxes above to enable payment."
+    }
   },
   "confirmation": {
     "title": "You're in.",

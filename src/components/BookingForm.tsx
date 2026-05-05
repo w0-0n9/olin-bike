@@ -16,6 +16,7 @@ import {
 
 export function BookingForm() {
   const t = useTranslations('book');
+  const tc = useTranslations('book.consent');
   const locale = useLocale();
 
   const [name, setName] = useState('');
@@ -27,14 +28,26 @@ export function BookingForm() {
   const [privateRoom, setPrivateRoom] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // GDPR: each box ticked individually. No master "agree to all".
+  const [consentWaiver, setConsentWaiver] = useState(false);
+  const [consentInsurance, setConsentInsurance] = useState(false);
+  const [consentPrivacy, setConsentPrivacy] = useState(false);
+  const [consentCancellation, setConsentCancellation] = useState(false);
+  const [consentFeedback, setConsentFeedback] = useState(false);
+  const [consentMedia, setConsentMedia] = useState(false);
+
   const total = calculateTotal({ bikeRental, privateRoom });
   const balance = total - PRICING.DEPOSIT;
 
-  const canSubmit =
-    name.trim() &&
-    email.trim() &&
-    (!bikeRental || (bikeSize && pedalType)) &&
-    !loading;
+  const allRequiredConsents =
+    consentWaiver && consentInsurance && consentPrivacy && consentCancellation;
+
+  const baseFieldsValid =
+    Boolean(name.trim()) &&
+    Boolean(email.trim()) &&
+    (!bikeRental || (Boolean(bikeSize) && Boolean(pedalType)));
+
+  const canSubmit = baseFieldsValid && allRequiredConsents && !loading;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -54,6 +67,15 @@ export function BookingForm() {
           pedalType: bikeRental ? pedalType : undefined,
           privateRoom,
           locale,
+          consents: {
+            waiver: consentWaiver,
+            insurance: consentInsurance,
+            privacy: consentPrivacy,
+            cancellation: consentCancellation,
+            feedback: consentFeedback,
+            media: consentMedia,
+            at: new Date().toISOString(),
+          },
         }),
       });
 
@@ -315,11 +337,116 @@ export function BookingForm() {
                   {t('depositNote')}
                 </p>
 
+                {/* GDPR-compliant consent block. Sits directly above the
+                    deposit button. Each required box must be individually
+                    ticked — no master "agree to all" checkbox. The button is
+                    disabled until all four required boxes are confirmed. */}
+                <fieldset className="mt-8 border-t border-paper-line pt-6">
+                  <legend className="kicker mb-4 text-paper-muted">
+                    {tc('title')}
+                  </legend>
+
+                  <div className="space-y-3 text-xs leading-relaxed text-ink">
+                    <ConsentRow
+                      id="consent-waiver"
+                      checked={consentWaiver}
+                      onChange={setConsentWaiver}
+                      required
+                      requiredLabel={tc('requiredLabel')}
+                    >
+                      {tc.rich('waiver', {
+                        link: (chunks) => (
+                          <Link
+                            href="/legal/waiver"
+                            target="_blank"
+                            rel="noopener"
+                            className="text-accent-deep underline-offset-2 hover:underline"
+                          >
+                            {chunks}
+                          </Link>
+                        ),
+                      })}
+                    </ConsentRow>
+
+                    <ConsentRow
+                      id="consent-insurance"
+                      checked={consentInsurance}
+                      onChange={setConsentInsurance}
+                      required
+                      requiredLabel={tc('requiredLabel')}
+                    >
+                      {tc('insurance')}
+                    </ConsentRow>
+
+                    <ConsentRow
+                      id="consent-privacy"
+                      checked={consentPrivacy}
+                      onChange={setConsentPrivacy}
+                      required
+                      requiredLabel={tc('requiredLabel')}
+                    >
+                      {tc.rich('privacy', {
+                        link: (chunks) => (
+                          <Link
+                            href="/legal/waiver#privacy"
+                            target="_blank"
+                            rel="noopener"
+                            className="text-accent-deep underline-offset-2 hover:underline"
+                          >
+                            {chunks}
+                          </Link>
+                        ),
+                      })}
+                    </ConsentRow>
+
+                    <ConsentRow
+                      id="consent-cancellation"
+                      checked={consentCancellation}
+                      onChange={setConsentCancellation}
+                      required
+                      requiredLabel={tc('requiredLabel')}
+                    >
+                      {tc.rich('cancellation', {
+                        link: (chunks) => (
+                          <Link
+                            href="/legal/waiver#cancellation"
+                            target="_blank"
+                            rel="noopener"
+                            className="text-accent-deep underline-offset-2 hover:underline"
+                          >
+                            {chunks}
+                          </Link>
+                        ),
+                      })}
+                    </ConsentRow>
+
+                    <p className="mt-5 text-[10px] uppercase tracking-wider2 text-paper-muted">
+                      {tc('optionalIntro')}
+                    </p>
+
+                    <ConsentRow
+                      id="consent-feedback"
+                      checked={consentFeedback}
+                      onChange={setConsentFeedback}
+                    >
+                      {tc('feedback')}
+                    </ConsentRow>
+
+                    <ConsentRow
+                      id="consent-media"
+                      checked={consentMedia}
+                      onChange={setConsentMedia}
+                    >
+                      {tc('media')}
+                    </ConsentRow>
+                  </div>
+                </fieldset>
+
                 <button
                   type="submit"
                   disabled={!canSubmit}
                   className={cn(
-                    'mt-8 w-full py-4 text-xs font-semibold uppercase tracking-wider2 transition-all',
+                    'mt-6 w-full py-4 text-xs font-semibold uppercase tracking-wider2 transition-all',
                     canSubmit
                       ? 'bg-ink text-paper-light hover:bg-navy hover:shadow-[0_10px_30px_-10px_rgba(20,22,42,0.4)]'
                       : 'cursor-not-allowed bg-paper-line text-paper-muted',
@@ -327,6 +454,12 @@ export function BookingForm() {
                 >
                   {loading ? t('processing') : `${t('payDeposit')} — ${formatUSD(PRICING.DEPOSIT)}`}
                 </button>
+
+                {baseFieldsValid && !allRequiredConsents && (
+                  <p className="mt-3 text-center text-[11px] text-paper-muted">
+                    {tc('helperHint')}
+                  </p>
+                )}
 
                 <p className="mt-4 flex items-center justify-center gap-2 text-[10px] uppercase tracking-wider2 text-paper-muted">
                   <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2">
@@ -341,5 +474,45 @@ export function BookingForm() {
         </form>
       </div>
     </section>
+  );
+}
+
+function ConsentRow({
+  id,
+  checked,
+  onChange,
+  required,
+  requiredLabel,
+  children,
+}: {
+  id: string;
+  checked: boolean;
+  onChange: (next: boolean) => void;
+  required?: boolean;
+  requiredLabel?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <label
+      htmlFor={id}
+      className="flex cursor-pointer items-start gap-3 text-ink"
+    >
+      <input
+        id={id}
+        type="checkbox"
+        checked={checked}
+        onChange={(e) => onChange(e.target.checked)}
+        aria-required={required ? true : undefined}
+        className="mt-0.5 h-4 w-4 flex-none accent-accent-deep"
+      />
+      <span className="flex-1">
+        {children}
+        {required && requiredLabel && (
+          <span className="ml-1 text-[10px] uppercase tracking-wider2 text-accent-deep">
+            {requiredLabel}
+          </span>
+        )}
+      </span>
+    </label>
   );
 }

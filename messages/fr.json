@@ -233,7 +233,19 @@
     "depositNote": "Votre dépôt est entièrement remboursable jusqu'à 60 jours avant le départ.",
     "payDeposit": "Payer le dépôt",
     "securedBy": "Sécurisé par Stripe",
-    "processing": "Redirection vers le paiement..."
+    "processing": "Redirection vers le paiement...",
+    "consent": {
+      "title": "Avant de réserver, merci de confirmer :",
+      "requiredLabel": "(obligatoire)",
+      "waiver": "J'ai lu et j'accepte la <link>Décharge du participant</link>, incluant l'Acceptation des risques et la Décharge de responsabilité. Je confirme avoir plus de 18 ans et être en bonne condition physique pour participer.",
+      "insurance": "Je confirme détenir, ou obtenir avant le départ, une assurance voyage valide couvrant les activités cyclistes en France, y compris l'évacuation médicale d'urgence.",
+      "privacy": "J'accepte la <link>Politique de confidentialité</link> et consens à ce qu'Olin traite mes données de réservation (nom, coordonnées, contact d'urgence, notes médicales) afin de fournir cette expérience.",
+      "cancellation": "J'ai lu et j'accepte la <link>Politique d'annulation et de remboursement</link>.",
+      "optionalIntro": "Facultatif — vous pouvez changer d'avis à tout moment en écrivant à info@olin.bike :",
+      "feedback": "Je consens à ce qu'Olin me contacte après le voyage pour un retour d'expérience (un court appel ou un questionnaire écrit, pas de marketing).",
+      "media": "Je consens à ce qu'Olin utilise des photos et vidéos où j'apparais, prises pendant le voyage, à des fins promotionnelles (site web, réseaux sociaux, invitations futures). Je peux retirer ce consentement à tout moment.",
+      "helperHint": "Cochez toutes les cases obligatoires ci-dessus pour activer le paiement."
+    }
   },
   "confirmation": {
     "title": "Vous êtes inscrit.",

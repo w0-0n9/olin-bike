@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display, Caveat } from 'next/font/google';
+import { getLocale } from 'next-intl/server';
 import './globals.css';
 
 const inter = Inter({
@@ -30,13 +31,22 @@ export const metadata: Metadata = {
 
 const adobeFontsKitId = process.env.NEXT_PUBLIC_ADOBE_FONTS_KIT_ID;
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Surface the active locale on <html> so CSS rules like
+  // `:lang(ko) { word-break: keep-all }` can target Korean for proper
+  // Hangul 어절 line-breaking, and so screen readers pronounce content
+  // with the right phoneme set.
+  const locale = await getLocale();
+
   return (
-    <html className={`${inter.variable} ${playfair.variable} ${caveat.variable}`}>
+    <html
+      lang={locale}
+      className={`${inter.variable} ${playfair.variable} ${caveat.variable}`}
+    >
       <head>
         {adobeFontsKitId ? (
           <link

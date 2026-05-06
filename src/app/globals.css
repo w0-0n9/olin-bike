@@ -15,6 +15,16 @@ body {
   min-height: 100vh;
 }
 
+/* Korean line-breaking. Default `word-break: normal` lets browsers split
+   between any two CJK characters mid-어절, which reads as broken Korean.
+   `keep-all` keeps Hangul phrases intact, breaking only at whitespace.
+   `break-word` is a fallback so single very long Latin tokens (URLs,
+   class names) can still wrap. */
+:lang(ko) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 ::selection {
   background: #F0E65A;
   color: #14162A;

@@ -10,11 +10,25 @@ import {
 export async function POST(req: NextRequest) {
   try {
     const body: BookingOptions = await req.json();
-    const { name, email, phone, bikeRental, bikeSize, pedalType, privateRoom, locale, consents } =
-      body;
+    const {
+      name,
+      email,
+      phone,
+      bikeRental,
+      bikeSize,
+      pedalType,
+      jerseySize,
+      privateRoom,
+      locale,
+      consents,
+    } = body;
 
     if (!name || !email) {
       return NextResponse.json({ error: 'Name and email are required' }, { status: 400 });
+    }
+
+    if (!jerseySize?.trim()) {
+      return NextResponse.json({ error: 'Jersey size is required' }, { status: 400 });
     }
 
     if (bikeRental && (!bikeSize || !pedalType)) {
@@ -62,6 +76,7 @@ export async function POST(req: NextRequest) {
         bike_rental: bikeRental ? 'yes' : 'no',
         bike_size: bikeSize || '',
         pedal_type: pedalType || '',
+        jersey_size: jerseySize.slice(0, 200),
         private_room: privateRoom ? 'yes' : 'no',
         total_cents: total.toString(),
         balance_cents: balance.toString(),
@@ -80,7 +95,7 @@ export async function POST(req: NextRequest) {
           req.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
           req.headers.get('x-real-ip') ||
           '',
-        consent_policy_version: '2026-04',
+        consent_policy_version: '2026-05',
       },
       success_url: `${siteUrl}/${locale}/book/confirmation?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/${locale}/book`,

@@ -53,7 +53,7 @@ export default async function WaiverPage({
             </div>
             <div>
               <dt className="kicker">Updated</dt>
-              <dd className="text-ink-soft">April 2026</dd>
+              <dd className="text-ink-soft">May 2026</dd>
             </div>
           </dl>
         </header>
@@ -230,9 +230,9 @@ export default async function WaiverPage({
 
         <Section number={9} title="Governing Law">
           <p>
-            This agreement is governed by the laws of the State of [Delaware/Wyoming — confirm once
-            LLC is filed], United States, save that nothing in this agreement excludes mandatory
-            consumer protections under the law of the participant&rsquo;s country of residence.
+            This agreement is governed by the laws of the United States, save that nothing in this
+            agreement excludes mandatory consumer protections under the law of the
+            participant&rsquo;s country of residence.
           </p>
         </Section>
 

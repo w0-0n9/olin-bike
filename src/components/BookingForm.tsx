@@ -25,6 +25,7 @@ export function BookingForm() {
   const [bikeRental, setBikeRental] = useState(false);
   const [bikeSize, setBikeSize] = useState('');
   const [pedalType, setPedalType] = useState('');
+  const [jerseySize, setJerseySize] = useState('');
   const [privateRoom, setPrivateRoom] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -45,6 +46,7 @@ export function BookingForm() {
   const baseFieldsValid =
     Boolean(name.trim()) &&
     Boolean(email.trim()) &&
+    Boolean(jerseySize.trim()) &&
     (!bikeRental || (Boolean(bikeSize) && Boolean(pedalType)));
 
   const canSubmit = baseFieldsValid && allRequiredConsents && !loading;
@@ -65,6 +67,7 @@ export function BookingForm() {
           bikeRental,
           bikeSize: bikeRental ? bikeSize : undefined,
           pedalType: bikeRental ? pedalType : undefined,
+          jerseySize,
           privateRoom,
           locale,
           consents: {
@@ -208,7 +211,7 @@ export function BookingForm() {
                       className="accent-accent-deep"
                     />
                     <span className="flex-1 text-sm text-ink sm:text-base">{t('bikeRental')}</span>
-                    <span className="text-sm font-medium text-accent-deep">+$500</span>
+                    <span className="text-sm font-medium text-accent-deep">+{formatUSD(PRICING.BIKE_RENTAL)}</span>
                   </label>
 
                   {bikeRental && (
@@ -252,6 +255,26 @@ export function BookingForm() {
                 </div>
               </fieldset>
 
+              {/* Jersey size — every founding member receives a jersey, so
+                  this is a required free-text field. Free text (vs select)
+                  accommodates brand-specific fits and chest measurements. */}
+              <fieldset>
+                <legend className="kicker mb-6 text-paper-muted">{t('jerseyTitle')}</legend>
+                <label htmlFor="jerseySize" className="mb-1.5 block text-sm font-medium text-ink">
+                  {t('jerseySize')}
+                </label>
+                <input
+                  id="jerseySize"
+                  type="text"
+                  required
+                  value={jerseySize}
+                  onChange={(e) => setJerseySize(e.target.value)}
+                  placeholder={t('jerseyPlaceholder')}
+                  className="w-full border border-paper-line bg-paper-warm px-4 py-3 text-ink placeholder:text-paper-muted focus:border-accent-deep focus:outline-none focus:ring-1 focus:ring-accent-deep"
+                />
+                <p className="mt-2 text-xs text-paper-muted">{t('jerseyHint')}</p>
+              </fieldset>
+
               {/* Room option */}
               <fieldset>
                 <legend className="kicker mb-6 text-paper-muted">{t('roomTitle')}</legend>
@@ -287,7 +310,7 @@ export function BookingForm() {
                       className="accent-accent-deep"
                     />
                     <span className="flex-1 text-sm text-ink sm:text-base">{t('roomPrivate')}</span>
-                    <span className="text-sm font-medium text-accent-deep">+$300</span>
+                    <span className="text-sm font-medium text-accent-deep">+{formatUSD(PRICING.PRIVATE_ROOM)}</span>
                   </label>
                 </div>
               </fieldset>

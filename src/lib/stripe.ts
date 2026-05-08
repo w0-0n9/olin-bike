@@ -21,7 +21,8 @@ export const PRICING = {
   BASE_FEE: 299000, // $2,990
   DEPOSIT: 130000, // $1,300
   BIKE_RENTAL: 50000, // $500
-  PRIVATE_ROOM: 30000, // $300
+  PRIVATE_ROOM: 110000, // $1,100 — priced to disincentivise solo rooms
+                       //          and cover the bed-gap they create.
 } as const;
 
 export const BIKE_SIZES = ['48', '50', '52', '54', '56', '58'] as const;
@@ -53,6 +54,10 @@ export type BookingOptions = {
   bikeSize?: BikeSize;
   pedalType?: PedalType;
   privateRoom: boolean;
+  // Free-text jersey sizing — every founding member receives a jersey,
+  // so this is required. Free text (rather than a select) lets riders
+  // describe brand-specific fits or chest measurements.
+  jerseySize: string;
   locale: string;
   consents: BookingConsents;
 };

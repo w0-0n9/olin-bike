@@ -29,6 +29,7 @@ export async function POST(req: NextRequest) {
           name: meta?.booking_name,
           email: meta?.booking_email,
           bikeRental: meta?.bike_rental,
+          jerseySize: meta?.jersey_size,
           privateRoom: meta?.private_room,
           total: meta?.total_cents,
           sessionId: session.id,

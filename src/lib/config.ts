@@ -5,7 +5,7 @@
 // Update via NEXT_PUBLIC_SPOTS_REMAINING env var, or fall back to this constant.
 const parsed = Number(process.env.NEXT_PUBLIC_SPOTS_REMAINING);
 export const SPOTS_REMAINING: number =
-  Number.isFinite(parsed) && parsed >= 0 ? parsed : 8;
+  Number.isFinite(parsed) && parsed >= 0 ? parsed : 6;
 
 export const TOTAL_SPOTS = 10;
 

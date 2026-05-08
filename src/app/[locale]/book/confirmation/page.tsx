@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { OlinMark } from '@/components/OlinMark';
 import Link from 'next/link';
+import { PRICING, formatUSD } from '@/lib/stripe';
 
 export default async function ConfirmationPage({
   params,
@@ -36,7 +37,7 @@ export default async function ConfirmationPage({
           <div className="space-y-3 text-sm">
             <div className="flex justify-between">
               <span className="text-paper/70">{t('depositPaid')}</span>
-              <span className="font-semibold text-accent">$1,300</span>
+              <span className="font-semibold text-accent">{formatUSD(PRICING.DEPOSIT)}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-paper/70">{t('balanceDue')}</span>

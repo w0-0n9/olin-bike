@@ -18,8 +18,8 @@ export function getStripe(): Stripe {
 
 // Pricing in cents (USD)
 export const PRICING = {
-  BASE_FEE: 299000, // $2,990
-  DEPOSIT: 130000, // $1,300
+  BASE_FEE: 349000, // $3,490
+  DEPOSIT: 170000, // $1,700
   BIKE_RENTAL: 50000, // $500
   PRIVATE_ROOM: 110000, // $1,100 — priced to disincentivise solo rooms
                        //          and cover the bed-gap they create.

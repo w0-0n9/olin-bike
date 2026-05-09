@@ -95,7 +95,7 @@ export async function POST(req: NextRequest) {
           req.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
           req.headers.get('x-real-ip') ||
           '',
-        consent_policy_version: '2026-05',
+        consent_policy_version: '2026-05-09',
       },
       success_url: `${siteUrl}/${locale}/book/confirmation?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/${locale}/book`,

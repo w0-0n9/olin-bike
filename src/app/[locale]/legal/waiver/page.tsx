@@ -145,7 +145,7 @@ export default async function WaiverPage({
 
         <Section number={6} title="Cancellation & Refund Policy" anchorId="cancellation">
           <p>
-            A deposit of USD $1,300 secures your place. The remaining balance of USD $1,690 is due
+            A deposit of USD $1,700 secures your place. The remaining balance of USD $1,790 is due
             no later than 21 May 2026. Optional carbon bike rental (USD $500) is invoiced with the
             final balance.
           </p>

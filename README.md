@@ -77,8 +77,8 @@ Single source of truth — `PRICING` in `src/lib/stripe.ts`:
 
 ```ts
 export const PRICING = {
-  BASE_FEE: 299000,     // $2,990 — full price
-  DEPOSIT: 130000,      // $1,300 — charged at checkout
+  BASE_FEE: 349000,     // $3,490 — full price
+  DEPOSIT: 170000,      // $1,700 — charged at checkout
   BIKE_RENTAL: 50000,   // $500
   PRIVATE_ROOM: 110000, // $1,100
 } as const;
@@ -173,11 +173,11 @@ mode wiring.
 
 1. **Form-only smoke test (free)**: Visit `/en/book`, fill the form,
    tick all four required consents, click "Pay deposit", confirm the
-   Stripe Checkout page loads with `$1,300`, then close the tab.
+   Stripe Checkout page loads with `$1,700`, then close the tab.
    This validates form → consent gating → Stripe redirect → price
    correctness.
 2. **Full end-to-end (~$38 in non-refunded Stripe fees)**: Pay
-   $1,300 with a real card, confirm the receipt email and the
+   $1,700 with a real card, confirm the receipt email and the
    confirmation page, then refund via Stripe Dashboard. This validates
    real payment processing, webhook delivery, metadata persistence,
    and the refund flow.

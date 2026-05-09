@@ -12,3 +12,6 @@ next-env.d.ts
 tsconfig.tsbuildinfo
 *.pdf
 *.ai
+
+# Screenshots and editor scratch files
+Screenshot*.png

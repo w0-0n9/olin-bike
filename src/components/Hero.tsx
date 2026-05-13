@@ -19,8 +19,6 @@ export function Hero() {
       />
 
       <div className="container-max relative z-10 flex flex-col items-center text-center">
-        <p className="kicker mb-6 text-paper/60 sm:mb-8">{t('kicker')}</p>
-
         <p className="display mx-auto max-w-xl text-base italic leading-relaxed text-paper/80 sm:text-lg">
           {t('intro')}
         </p>
@@ -28,12 +26,12 @@ export function Hero() {
         <div className="my-14 flex flex-col items-center sm:my-20">
           <OlinMark
             variant="auto"
-            className="mb-8 h-20 w-20 text-paper-light sm:h-24 sm:w-24"
+            className="mb-8 h-28 w-28 text-paper-light sm:h-36 sm:w-36"
           />
           <h1 className="brush text-7xl leading-none text-paper-light sm:text-8xl md:text-[10rem]">
             {t('brand')}
           </h1>
-          <p className="display mt-4 text-2xl italic text-paper-light/90 sm:text-3xl md:text-4xl">
+          <p className="display mt-4 text-3xl italic text-paper-light/90 sm:text-4xl md:text-5xl">
             {t('tagline')}
           </p>
         </div>

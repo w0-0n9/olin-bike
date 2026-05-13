@@ -13,7 +13,6 @@
     "reserve": "Reservar"
   },
   "hero": {
-    "kicker": "Invitación exclusiva.",
     "intro": "Bienvenido a una experiencia ciclista única en la vida.",
     "brand": "OLIN",
     "tagline": "Cycling Experiences",
@@ -121,32 +120,32 @@
     "title": "Itinerario",
     "days": [
       {
-        "date": "Lunes 21 de julio",
+        "date": "Martes 21 de julio",
         "label": "Llegada y primer recorrido",
         "body": "Tu viaje comienza en Lyon — una ciudad con vuelos internacionales y un TGV directo desde París Charles de Gaulle en menos de dos horas. Te recogemos a las 9:00 am y te llevamos al chalet. La tarde comienza con un recorrido introductorio tranquilo por el valle alpino: una oportunidad para mover las piernas, disfrutar del paisaje y encontrar tu ritmo con el grupo. Por la noche, tus guías te presentan la semana que viene durante la cena."
       },
       {
-        "date": "Martes 22 de julio",
+        "date": "Miércoles 22 de julio",
         "label": "La gran rodada",
         "body": "Un día más largo y exigente en el sillín. Nos enfrentamos a los ascensos clásicos del macizo de Oisans — los puertos de montaña que el pelotón profesional recorrerá días después. Tus guías lideran el camino. La van de apoyo sigue con asistencia mecánica, snacks e hidratación. El coaching sobre ritmo y técnica de escalada está integrado en el recorrido. El jacuzzi te espera en el chalet cuando regreses."
       },
       {
-        "date": "Miércoles 23 de julio",
+        "date": "Jueves 23 de julio",
         "label": "Etapa 18 en vivo",
         "body": "El primero de tres días consecutivos viendo el Tour de Francia en persona. Posicionamos al grupo en un punto estratégico del recorrido de la Etapa 18 para máxima atmósfera y proximidad al pelotón. Un recorrido ligero opcional sobre una sección del trayecto por la mañana te permite calentar antes de que llegue la carrera. Tu guía proporciona comentarios tácticos sobre la carrera durante todo el día."
       },
       {
-        "date": "Jueves 24 de julio",
+        "date": "Viernes 24 de julio",
         "label": "Alpe d'Huez y Etapa 19",
         "body": "El momento central de la semana. Recorremos las 21 curvas en horquilla de Alpe d'Huez, uno de los ascensos más celebrados de todo el ciclismo profesional, una montaña que ocupa un lugar en la mitología del deporte como ninguna otra. Ascendemos antes de que llegue la carrera, alcanzamos la cima y tomamos nuestra posición para ver la llegada de la Etapa 19 en vivo a nuestro alrededor. Pocos lugares en el deporte generan este tipo de atmósfera."
       },
       {
-        "date": "Viernes 25 de julio",
+        "date": "Sábado 25 de julio",
         "label": "Etapa 20 y cena de despedida",
         "body": "Un día completo dedicado a la Etapa 20 — una de las etapas de montaña decisivas del Tour 2026. Mantenemos nuestra posición de visionado, guiados por tu equipo que sabe dónde la carrera cobra vida. Por la noche regresamos al chalet para la cena de despedida: una celebración de la semana, los recorridos y las personas con quienes los compartiste."
       },
       {
-        "date": "Sábado 26 de julio",
+        "date": "Domingo 26 de julio",
         "label": "Partida",
         "body": "Después de un último desayuno juntos en el chalet, te llevamos de regreso a Lyon. Desde allí continúas hacia donde el mundo te lleve — llevando contigo algo que las montañas suelen dejar atrás."
       }

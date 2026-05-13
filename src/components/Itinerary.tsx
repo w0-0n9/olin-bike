@@ -126,7 +126,7 @@ export function Itinerary() {
                     >
                       {days[active].label}
                     </p>
-                    <p className="display mt-2 text-xs italic text-paper-light/80 sm:text-sm">
+                    <p className="display mt-2 text-sm italic text-paper-light/80 sm:text-base md:text-lg">
                       {days[active].date}
                     </p>
                   </div>
@@ -182,7 +182,7 @@ export function Itinerary() {
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </span>
-                  <p className="kicker mb-1 text-paper-muted">{day.date}</p>
+                  <p className="kicker mb-2 text-sm text-paper-muted sm:text-base">{day.date}</p>
                   <h3 className="display mb-3 text-2xl text-ink sm:text-[1.65rem]">
                     {day.label}
                   </h3>

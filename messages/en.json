@@ -13,7 +13,6 @@
     "reserve": "Reserve"
   },
   "hero": {
-    "kicker": "You are exclusively invited.",
     "intro": "Welcome to a cycling experience of a lifetime.",
     "brand": "OLIN",
     "tagline": "Cycling Experiences",
@@ -121,32 +120,32 @@
     "title": "Itinerary",
     "days": [
       {
-        "date": "Monday July 21",
+        "date": "Tuesday July 21",
         "label": "Arrival & first ride",
         "body": "Your journey begins in Lyon — a city served by international flights and a direct TGV from Paris Charles de Gaulle in under two hours. We pick you up at 9:00 am and drive you to the chalet. The afternoon begins with a gentle introductory ride through the alpine valley: a chance to move your legs, take in the landscape, and find your rhythm with the group. In the evening, your guides walk you through the week ahead over dinner."
       },
       {
-        "date": "Tuesday July 22",
+        "date": "Wednesday July 22",
         "label": "The big ride",
         "body": "A longer, more demanding day in the saddle. We take on the classic climbs of the Oisans massif — the cols that the professional peloton will ride days later. Your guides lead the way. The support van follows with mechanical assistance, snacks, and hydration. Coaching on pacing and climbing technique is woven into the ride. The hot tub waits at the chalet when you return."
       },
       {
-        "date": "Wednesday July 23",
+        "date": "Thursday July 23",
         "label": "Stage 18 live",
         "body": "The first of three consecutive days watching the Tour de France in person. We position the group at a strategic point along Stage 18's route for maximum atmosphere and proximity to the peloton. An optional light ride on a section of the stage route in the morning lets you warm up before the race arrives. Your guide provides tactical race commentary throughout."
       },
       {
-        "date": "Thursday July 24",
+        "date": "Friday July 24",
         "label": "Alpe d'Huez & Stage 19",
         "body": "The centerpiece of the week. We ride the 21 hairpin bends of Alpe d'Huez — one of the most celebrated climbs in all of professional cycling, a mountain that holds a place in the sport's mythology unlike any other. We ascend ahead of the race, reach the summit, and take our position to watch Stage 19 finish live around us. Few places in sport produce this kind of atmosphere."
       },
       {
-        "date": "Friday July 25",
+        "date": "Saturday July 25",
         "label": "Stage 20 & farewell dinner",
         "body": "A full day dedicated to Stage 20 — one of the decisive mountain stages of the 2026 Tour. We hold viewing position, guided by your team who know where the race comes alive. In the evening we return to the chalet for the farewell dinner: a celebration of the week, the rides, and the people you shared them with."
       },
       {
-        "date": "Saturday July 26",
+        "date": "Sunday July 26",
         "label": "Departure",
         "body": "After a final breakfast together at the chalet, we drive you back to Lyon. From there you connect onward to wherever the world takes you next — carrying something the mountains tend to leave behind."
       }

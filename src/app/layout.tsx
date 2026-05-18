@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display, Caveat } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { getLocale } from 'next-intl/server';
 import './globals.css';
 
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
 };
 
 const adobeFontsKitId = process.env.NEXT_PUBLIC_ADOBE_FONTS_KIT_ID;
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export default async function RootLayout({
   children,
@@ -56,6 +58,7 @@ export default async function RootLayout({
         ) : null}
       </head>
       <body>{children}</body>
+      {gaMeasurementId ? <GoogleAnalytics gaId={gaMeasurementId} /> : null}
     </html>
   );
 }

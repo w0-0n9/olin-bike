@@ -47,6 +47,7 @@ npm run build                     # production build (also runs tsc)
 | `NEXT_PUBLIC_ADOBE_FONTS_KIT_ID` | client | If unset, brush headings fall back to Caveat. |
 | `NEXT_PUBLIC_SPOTS_REMAINING` | client | Number 0–10. Falls back to constant in `lib/config.ts`. |
 | `NEXT_PUBLIC_INSTAGRAM_HANDLE` | client | Without `@`, e.g. `olincycle`. |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | client | GA4 measurement ID (e.g. `G-XXXXXXXXXX`). Unset → tracking disabled. |
 
 ---
 
@@ -119,6 +120,20 @@ When you change material terms (e.g. cancellation policy):
 3. Add a `language.de` label entry to every existing locale file.
 4. `npm run build` to confirm static pages generate for every
    locale × route combination.
+
+### Google Analytics
+
+GA4 is wired via `@next/third-parties/google` in `src/app/layout.tsx`.
+The `<GoogleAnalytics>` tag only renders when
+`NEXT_PUBLIC_GA_MEASUREMENT_ID` is set, so local/preview environments
+stay clean unless you opt in.
+
+- **View data**: analytics.google.com → *Olin Cycling Tours* property →
+  Reports → Realtime / Acquisition.
+- **Disable tracking temporarily**: clear the env var in Vercel and
+  redeploy. The site keeps working; the script just stops loading.
+- **Rotate / change the property**: update the Vercel env var to the new
+  `G-…` ID and redeploy. No code change needed.
 
 ---
 
@@ -193,11 +208,11 @@ vercel logs <deployment-url>  # tail logs from a deployment
 vercel env ls                 # list env vars (encrypted)
 ```
 
-⚠️ **GitHub auto-deploy is currently disconnected.** Pushes to `main`
-do not auto-deploy. Run `vercel --prod` after each push until the
-GitHub integration is reconnected (Vercel → Settings → Git → re-link
-the repo). This is a known issue, not a bug introduced by recent
-work.
+Pushes to `main` auto-deploy to production via the Vercel ↔ GitHub
+integration (typically live within ~5 seconds of push). If auto-deploy
+ever stops firing — e.g. the GitHub link drops again — `vercel --prod --yes`
+is the manual fallback while you re-link the repo at
+Vercel → Settings → Git.
 
 ## Domain & SSL
 

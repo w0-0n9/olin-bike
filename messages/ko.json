@@ -241,6 +241,14 @@
     "deposit": "디파짓 결제 (오늘 결제 금액)",
     "balance": "잔금 (출발 30일 전 결제)",
     "depositNote": "디파짓은 투어 출발 60일 전까지 100% 환불 가능합니다.",
+    "promo": {
+      "label": "프로모션 코드",
+      "placeholder": "코드 입력",
+      "apply": "적용",
+      "remove": "해제",
+      "applied": "프로모션 ({code})",
+      "invalid": "사용할 수 없는 코드입니다"
+    },
     "payDeposit": "디파짓 결제하기",
     "securedBy": "Stripe로 안전하게 결제됩니다",
     "processing": "결제 페이지로 이동 중입니다...",

@@ -234,6 +234,14 @@
     "deposit": "Dépôt (aujourd'hui)",
     "balance": "Solde (30 jours avant le départ)",
     "depositNote": "Votre dépôt est entièrement remboursable jusqu'à 60 jours avant le départ.",
+    "promo": {
+      "label": "Code promotionnel",
+      "placeholder": "Saisir le code",
+      "apply": "Appliquer",
+      "remove": "Retirer",
+      "applied": "Promotion ({code})",
+      "invalid": "Code promotionnel invalide"
+    },
     "payDeposit": "Payer le dépôt",
     "securedBy": "Sécurisé par Stripe",
     "processing": "Redirection vers le paiement...",

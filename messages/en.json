@@ -234,6 +234,14 @@
     "deposit": "Deposit (today)",
     "balance": "Balance (30 days before departure)",
     "depositNote": "Your deposit is fully refundable up to 60 days before departure.",
+    "promo": {
+      "label": "Promotion code",
+      "placeholder": "Enter code",
+      "apply": "Apply",
+      "remove": "Remove",
+      "applied": "Promotion ({code})",
+      "invalid": "Invalid promotion code"
+    },
     "payDeposit": "Pay deposit",
     "securedBy": "Secured by Stripe",
     "processing": "Redirecting to payment...",

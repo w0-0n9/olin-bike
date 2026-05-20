@@ -234,6 +234,14 @@
     "deposit": "Depósito (hoy)",
     "balance": "Saldo (30 días antes de la salida)",
     "depositNote": "Tu depósito es reembolsable hasta 60 días antes de la salida.",
+    "promo": {
+      "label": "Código de promoción",
+      "placeholder": "Introduce el código",
+      "apply": "Aplicar",
+      "remove": "Quitar",
+      "applied": "Promoción ({code})",
+      "invalid": "Código de promoción no válido"
+    },
     "payDeposit": "Pagar depósito",
     "securedBy": "Protegido por Stripe",
     "processing": "Redirigiendo al pago...",

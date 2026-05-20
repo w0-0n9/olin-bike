@@ -25,6 +25,19 @@ export const PRICING = {
                        //          and cover the bed-gap they create.
 } as const;
 
+// Hardcoded promotion codes. Map of normalized (uppercase, trimmed) code →
+// discount in cents. One-off launch promo; keep this inline rather than
+// introducing Stripe Coupons/Promotion Codes objects.
+export const PROMO_CODES: Record<string, number> = {
+  TDF26: 50000, // $500 off the deposit
+};
+
+export function getPromoDiscount(code?: string | null): number {
+  if (!code) return 0;
+  const normalized = code.trim().toUpperCase();
+  return PROMO_CODES[normalized] ?? 0;
+}
+
 export const BIKE_SIZES = ['48', '50', '52', '54', '56', '58'] as const;
 export const PEDAL_TYPES = ['SPD-SL', 'SPD', 'Look Keo', 'Flat'] as const;
 
@@ -59,6 +72,7 @@ export type BookingOptions = {
   // describe brand-specific fits or chest measurements.
   jerseySize: string;
   locale: string;
+  promoCode?: string;
   consents: BookingConsents;
 };
 
@@ -69,10 +83,15 @@ export const REQUIRED_CONSENT_KEYS = [
   'cancellation',
 ] as const;
 
-export function calculateTotal(opts: { bikeRental: boolean; privateRoom: boolean }) {
+export function calculateTotal(opts: {
+  bikeRental: boolean;
+  privateRoom: boolean;
+  promoCode?: string | null;
+}) {
   let total = PRICING.BASE_FEE;
   if (opts.bikeRental) total += PRICING.BIKE_RENTAL;
   if (opts.privateRoom) total += PRICING.PRIVATE_ROOM;
+  total -= getPromoDiscount(opts.promoCode);
   return total;
 }
 

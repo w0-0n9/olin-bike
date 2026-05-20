@@ -12,6 +12,7 @@ import {
   PRICING,
   calculateTotal,
   formatUSD,
+  getPromoDiscount,
 } from '@/lib/stripe';
 
 export function BookingForm() {
@@ -29,6 +30,10 @@ export function BookingForm() {
   const [privateRoom, setPrivateRoom] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const [promoInput, setPromoInput] = useState('');
+  const [appliedPromo, setAppliedPromo] = useState<string | null>(null);
+  const [promoError, setPromoError] = useState(false);
+
   // GDPR: each box ticked individually. No master "agree to all".
   const [consentWaiver, setConsentWaiver] = useState(false);
   const [consentInsurance, setConsentInsurance] = useState(false);
@@ -37,8 +42,27 @@ export function BookingForm() {
   const [consentFeedback, setConsentFeedback] = useState(false);
   const [consentMedia, setConsentMedia] = useState(false);
 
-  const total = calculateTotal({ bikeRental, privateRoom });
-  const balance = total - PRICING.DEPOSIT;
+  const promoDiscount = getPromoDiscount(appliedPromo);
+  const total = calculateTotal({ bikeRental, privateRoom, promoCode: appliedPromo });
+  const depositAmount = PRICING.DEPOSIT - promoDiscount;
+  const balance = total - depositAmount;
+
+  function handleApplyPromo() {
+    const code = promoInput.trim();
+    if (!code) return;
+    if (getPromoDiscount(code) > 0) {
+      setAppliedPromo(code.toUpperCase());
+      setPromoError(false);
+    } else {
+      setPromoError(true);
+    }
+  }
+
+  function handleRemovePromo() {
+    setAppliedPromo(null);
+    setPromoInput('');
+    setPromoError(false);
+  }
 
   const allRequiredConsents =
     consentWaiver && consentInsurance && consentPrivacy && consentCancellation;
@@ -70,6 +94,7 @@ export function BookingForm() {
           jerseySize,
           privateRoom,
           locale,
+          promoCode: appliedPromo ?? undefined,
           consents: {
             waiver: consentWaiver,
             insurance: consentInsurance,
@@ -338,6 +363,12 @@ export function BookingForm() {
                       <span>+{formatUSD(PRICING.PRIVATE_ROOM)}</span>
                     </div>
                   )}
+                  {appliedPromo && (
+                    <div className="flex justify-between text-sm text-accent-deep">
+                      <span>{t('promo.applied', { code: appliedPromo })}</span>
+                      <span>−{formatUSD(promoDiscount)}</span>
+                    </div>
+                  )}
                 </div>
 
                 <div className="mt-4 flex justify-between text-lg font-semibold text-ink">
@@ -348,7 +379,7 @@ export function BookingForm() {
                 <div className="mt-6 space-y-2 border-t border-paper-line pt-6">
                   <div className="flex justify-between">
                     <span className="text-sm font-semibold text-accent-deep">{t('deposit')}</span>
-                    <span className="text-lg font-bold text-accent-deep">{formatUSD(PRICING.DEPOSIT)}</span>
+                    <span className="text-lg font-bold text-accent-deep">{formatUSD(depositAmount)}</span>
                   </div>
                   <div className="flex justify-between text-xs text-paper-muted">
                     <span>{t('balance')}</span>
@@ -359,6 +390,64 @@ export function BookingForm() {
                 <p className="mt-6 text-xs leading-relaxed text-paper-muted">
                   {t('depositNote')}
                 </p>
+
+                <div className="mt-6 border-t border-paper-line pt-6">
+                  <label htmlFor="promoCode" className="kicker mb-3 block text-paper-muted">
+                    {t('promo.label')}
+                  </label>
+                  {appliedPromo ? (
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 border border-accent-deep bg-accent/10 px-4 py-3 text-sm font-medium text-accent-deep">
+                        {appliedPromo} · −{formatUSD(promoDiscount)}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={handleRemovePromo}
+                        className="border border-paper-line bg-paper-warm px-4 py-3 text-xs font-semibold uppercase tracking-wider2 text-ink transition-colors hover:border-ink/40"
+                      >
+                        {t('promo.remove')}
+                      </button>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="flex items-center gap-2">
+                        <input
+                          id="promoCode"
+                          type="text"
+                          value={promoInput}
+                          onChange={(e) => {
+                            setPromoInput(e.target.value);
+                            if (promoError) setPromoError(false);
+                          }}
+                          placeholder={t('promo.placeholder')}
+                          autoComplete="off"
+                          className={cn(
+                            'flex-1 border bg-paper-warm px-4 py-3 text-sm text-ink placeholder:text-paper-muted focus:outline-none focus:ring-1',
+                            promoError
+                              ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                              : 'border-paper-line focus:border-accent-deep focus:ring-accent-deep',
+                          )}
+                        />
+                        <button
+                          type="button"
+                          onClick={handleApplyPromo}
+                          disabled={!promoInput.trim()}
+                          className={cn(
+                            'border px-4 py-3 text-xs font-semibold uppercase tracking-wider2 transition-colors',
+                            promoInput.trim()
+                              ? 'border-ink bg-ink text-paper-light hover:bg-navy'
+                              : 'cursor-not-allowed border-paper-line bg-paper-line text-paper-muted',
+                          )}
+                        >
+                          {t('promo.apply')}
+                        </button>
+                      </div>
+                      {promoError && (
+                        <p className="mt-2 text-xs text-red-600">{t('promo.invalid')}</p>
+                      )}
+                    </>
+                  )}
+                </div>
 
                 {/* GDPR-compliant consent block. Sits directly above the
                     deposit button. Each required box must be individually
@@ -475,7 +564,7 @@ export function BookingForm() {
                       : 'cursor-not-allowed bg-paper-line text-paper-muted',
                   )}
                 >
-                  {loading ? t('processing') : `${t('payDeposit')} — ${formatUSD(PRICING.DEPOSIT)}`}
+                  {loading ? t('processing') : `${t('payDeposit')} — ${formatUSD(depositAmount)}`}
                 </button>
 
                 {baseFieldsValid && !allRequiredConsents && (

@@ -4,6 +4,7 @@ import {
   PRICING,
   REQUIRED_CONSENT_KEYS,
   calculateTotal,
+  getPromoDiscount,
   type BookingOptions,
 } from '@/lib/stripe';
 
@@ -20,6 +21,7 @@ export async function POST(req: NextRequest) {
       jerseySize,
       privateRoom,
       locale,
+      promoCode,
       consents,
     } = body;
 
@@ -47,8 +49,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing consent timestamp.' }, { status: 400 });
     }
 
-    const total = calculateTotal({ bikeRental, privateRoom });
-    const balance = total - PRICING.DEPOSIT;
+    // Re-validate promo server-side. Client value is never trusted for pricing.
+    const promoDiscount = getPromoDiscount(promoCode);
+    const appliedPromoCode = promoDiscount > 0 ? promoCode!.trim().toUpperCase() : '';
+    const total = calculateTotal({ bikeRental, privateRoom, promoCode });
+    const depositAmount = PRICING.DEPOSIT - promoDiscount;
+    const balance = total - depositAmount;
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
@@ -62,9 +68,11 @@ export async function POST(req: NextRequest) {
             currency: 'usd',
             product_data: {
               name: 'Olin TDF 2026 — Deposit',
-              description: `Founding member deposit for Tour de France 2026 experience (July 21–26). Total: $${total / 100}. Balance of $${balance / 100} due 30 days before departure.`,
+              description: appliedPromoCode
+                ? `Founding member deposit for Tour de France 2026 experience (July 21–26). Total: $${total / 100}. Balance of $${balance / 100} due 30 days before departure. Promotion ${appliedPromoCode} −$${promoDiscount / 100} applied.`
+                : `Founding member deposit for Tour de France 2026 experience (July 21–26). Total: $${total / 100}. Balance of $${balance / 100} due 30 days before departure.`,
             },
-            unit_amount: PRICING.DEPOSIT,
+            unit_amount: depositAmount,
           },
           quantity: 1,
         },
@@ -80,6 +88,9 @@ export async function POST(req: NextRequest) {
         private_room: privateRoom ? 'yes' : 'no',
         total_cents: total.toString(),
         balance_cents: balance.toString(),
+        deposit_cents: depositAmount.toString(),
+        promo_code: appliedPromoCode,
+        promo_discount_cents: promoDiscount.toString(),
         locale,
         // GDPR consent audit trail. Each required consent is persisted with
         // the same submit-time ISO timestamp; optional consents are stamped

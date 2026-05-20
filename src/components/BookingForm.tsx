@@ -419,6 +419,15 @@ export function BookingForm() {
                             setPromoInput(e.target.value);
                             if (promoError) setPromoError(false);
                           }}
+                          onKeyDown={(e) => {
+                            // Enter inside the promo input should apply the
+                            // code, not submit the whole form (which would
+                            // redirect to Stripe with full deposit).
+                            if (e.key === 'Enter') {
+                              e.preventDefault();
+                              handleApplyPromo();
+                            }
+                          }}
                           placeholder={t('promo.placeholder')}
                           autoComplete="off"
                           className={cn(

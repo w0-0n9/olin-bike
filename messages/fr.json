@@ -68,7 +68,7 @@
       {
         "icon": "flag",
         "title": "Le Tour",
-        "body": "Visionnage en direct des étapes 18, 19 et 20 — y compris les virages de l'Alpe d'Huez."
+        "body": "Visionnage en direct des étapes 17, 19 et 20 — y compris les virages de l'Alpe d'Huez."
       },
       {
         "icon": "home",
@@ -78,7 +78,7 @@
       {
         "icon": "bike",
         "title": "Roulage",
-        "body": "Trois sorties guidées avec fichiers GPX, assistance mécanique sur route, ravitaillement et hydratation quotidiens. Location de vélo carbone sur demande (500 $)."
+        "body": "Quatre sorties guidées avec fichiers GPX, assistance mécanique sur route, ravitaillement et hydratation quotidiens. Location de vélo carbone sur demande (500 $)."
       },
       {
         "icon": "compass",
@@ -97,7 +97,7 @@
       }
     ],
     "items": [
-      "Visionnage en direct des étapes 18, 19 et 20 du TDF",
+      "Visionnage en direct des étapes 17, 19 et 20 du TDF",
       "Six jours / cinq nuits dans le chalet privé à Oz, Auvergne-Rhône-Alpes (21 au 26 juillet)",
       "Tout l'hébergement",
       "Petit-déjeuner et dîner quotidiens, y compris les dîners de bienvenue et d'adieu",
@@ -106,13 +106,13 @@
       "Jacuzzi au chalet disponible chaque soir pour la récupération et la détente",
       "Guide multilingue toute la semaine (espagnol, anglais, français et italien)",
       "Briefings d'itinéraire quotidiens et coaching cycliste sur la technique, le rythme et l'ascension",
-      "3 sorties guidées avec fichiers GPX fournis",
+      "4 sorties guidées avec fichiers GPX fournis",
       "Collations, nutrition énergétique et hydratation sur tous les jours de vélo",
       "Location de vélo en carbone sur demande (frais de location 500 USD) ; vous pouvez aussi apporter votre propre vélo",
       "Maillot de membre fondateur Olin",
       "Contrôles vélo après les sorties avec kit Wolf Tooth et Park Tools"
     ],
-    "note": "Oz est un village de montagne situé au cœur du massif de l'Oisans, à quelques minutes de l'Alpe d'Huez et des routes des étapes 18, 19 et 20 de la plus grande course cycliste du monde. L'hébergement sera partagé en chambres de 2 ou 3 personnes. Si vous souhaitez une chambre privée, elle est disponible moyennant un supplément.",
+    "note": "Oz est un village de montagne situé au cœur du massif de l'Oisans, à quelques minutes de l'Alpe d'Huez et des routes des étapes 17, 19 et 20 de la plus grande course cycliste du monde. L'hébergement sera partagé en chambres de 2 ou 3 personnes. Si vous souhaitez une chambre privée, elle est disponible moyennant un supplément.",
     "perk": "De plus, nos dix membres fondateurs bénéficieront d'une réduction de trente pour cent pour l'expérience Olin TDF 2027.",
     "excluded": "Non inclus : vols internationaux ou trains pour Lyon. Déjeuners les jours de course (cafés locaux et étals de nourriture le long du parcours)."
   },
@@ -126,13 +126,13 @@
       },
       {
         "date": "Mercredi 22 juillet",
-        "label": "La grande sortie",
-        "body": "Une journée plus longue et plus exigeante en selle. Nous affrontons les cols classiques du massif de l'Oisans — les cols que le peloton professionnel empruntera quelques jours plus tard. Vos guides ouvrent la voie. Le van de soutien suit avec assistance mécanique, collations et hydratation. Le coaching sur le rythme et la technique d'ascension est intégré à la sortie. Le jacuzzi vous attend au chalet à votre retour."
+        "label": "Expérience Étape 17",
+        "body": "Au départ d'Oz-en-Oisans, vivez l'émotion unique qui accompagne l'arrivée de la 17ᵉ étape à Voiron. Cette journée vous permettra de vous immerger dans l'atmosphère incomparable du Tour de France, entouré de passionnés venus du monde entier, et de ressentir toute l'intensité du Tour."
       },
       {
         "date": "Jeudi 23 juillet",
-        "label": "Étape 18 en direct",
-        "body": "Le premier de trois jours consécutifs à suivre le Tour de France en personne. Nous positionnons le groupe à un point stratégique du parcours de l'Étape 18 pour une atmosphère maximale et une proximité avec le peloton. Une sortie légère optionnelle sur une section du parcours le matin vous permet de vous échauffer avant l'arrivée de la course. Votre guide fournit des commentaires tactiques sur la course tout au long de la journée."
+        "label": "Découverte des Alpes et expérience viticole",
+        "body": "Partez à la découverte des Alpes françaises lors d'une sortie à travers des routes tranquilles, des villages et des paysages à couper le souffle. Conçue pour privilégier autant le plaisir du vélo que la découverte culturelle, cette journée se conclut par une visite d'un domaine viticole local, où vous pourrez apprécier les saveurs et le savoir-faire qui font la renommée de la région."
       },
       {
         "date": "Vendredi 24 juillet",

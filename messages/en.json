@@ -68,7 +68,7 @@
       {
         "icon": "flag",
         "title": "The Tour",
-        "body": "Live viewing of Stages 18, 19 and 20 — including the bends of Alpe d'Huez."
+        "body": "Live viewing of Stages 17, 19 and 20 — including the bends of Alpe d'Huez."
       },
       {
         "icon": "home",
@@ -78,7 +78,7 @@
       {
         "icon": "bike",
         "title": "Riding",
-        "body": "Three guided rides with GPX files, on-road mechanic support, daily nutrition and hydration. Carbon bike rental on request ($500)."
+        "body": "Four guided rides with GPX files, on-road mechanic support, daily nutrition and hydration. Carbon bike rental on request ($500)."
       },
       {
         "icon": "compass",
@@ -97,7 +97,7 @@
       }
     ],
     "items": [
-      "Live viewing of TDF Stages 18, 19, and 20",
+      "Live viewing of TDF Stages 17, 19, and 20",
       "Six days / five nights in the private chalet in Oz, Auvergne-Rhône-Alpes (July 21–26)",
       "All accommodations",
       "Daily breakfast and dinner, including the welcome and farewell dinners",
@@ -106,13 +106,13 @@
       "Chalet hot tub available each evening for recovery and relaxation",
       "Multilingual guide throughout the week (Spanish, English, French & Italian)",
       "Daily itinerary briefings and cycling coaching on technique, pacing, and climbing",
-      "3 guided rides with GPX files provided",
+      "4 guided rides with GPX files provided",
       "On-ride snacks, energy nutrition, and hydration on all cycling days",
       "Carbon bike rental if requested (rental fee USD $500). You can bring your bike too",
       "Olin cycling founder member jersey",
       "After rides bike check-ups with WolfTooth & Park Tools Kit"
     ],
-    "note": "Oz is a mountain village set in the heart of the Oisans massif, minutes from Alpe d'Huez and the routes of stages 18, 19 and 20 of the world's greatest cycling race. Accommodation will be shared in bedrooms between 2 or 3 people. If interested in a private bedroom, availability is available with an additional fee.",
+    "note": "Oz is a mountain village set in the heart of the Oisans massif, minutes from Alpe d'Huez and the routes of stages 17, 19 and 20 of the world's greatest cycling race. Accommodation will be shared in bedrooms between 2 or 3 people. If interested in a private bedroom, availability is available with an additional fee.",
     "perk": "Also all our ten founding members will get thirty percent discount for TDF 2027 Olin experience.",
     "excluded": "Not included: International flights or trains to Lyon. Lunches on race-viewing days (local cafés and food stalls along the route)."
   },
@@ -126,13 +126,13 @@
       },
       {
         "date": "Wednesday July 22",
-        "label": "The big ride",
-        "body": "A longer, more demanding day in the saddle. We take on the classic climbs of the Oisans massif — the cols that the professional peloton will ride days later. Your guides lead the way. The support van follows with mechanical assistance, snacks, and hydration. Coaching on pacing and climbing technique is woven into the ride. The hot tub waits at the chalet when you return."
+        "label": "Stage 17 experience",
+        "body": "Ride from Oz-en-Oisans to experience the excitement surrounding the finish of Stage 17 in Voiron. Enjoy a day immersed in the atmosphere of the Tour de France, with access to the vibrant race-day environment, enthusiastic spectators, and the unique energy that the Tour brings."
       },
       {
         "date": "Thursday July 23",
-        "label": "Stage 18 live",
-        "body": "The first of three consecutive days watching the Tour de France in person. We position the group at a strategic point along Stage 18's route for maximum atmosphere and proximity to the peloton. An optional light ride on a section of the stage route in the morning lets you warm up before the race arrives. Your guide provides tactical race commentary throughout."
+        "label": "Alpine discovery & vineyard ride",
+        "body": "Explore the beauty of the French Alps on a relaxed and scenic ride through villages and rolling mountain terrain. With flexible route options and a focus on enjoying the journey, the day concludes with a visit to a local vineyard, where participants can unwind and experience the flavors and traditions of the region."
       },
       {
         "date": "Friday July 24",

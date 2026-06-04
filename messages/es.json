@@ -68,7 +68,7 @@
       {
         "icon": "flag",
         "title": "El Tour",
-        "body": "Visualización en vivo de las etapas 18, 19 y 20, incluidas las curvas de Alpe d'Huez."
+        "body": "Visualización en vivo de las etapas 17, 19 y 20, incluidas las curvas de Alpe d'Huez."
       },
       {
         "icon": "home",
@@ -78,7 +78,7 @@
       {
         "icon": "bike",
         "title": "Pedaleo",
-        "body": "Tres recorridos guiados con GPX, asistencia mecánica en ruta, nutrición e hidratación diarias. Alquiler de bici de carbono bajo petición ($500)."
+        "body": "Cuatro recorridos guiados con GPX, asistencia mecánica en ruta, nutrición e hidratación diarias. Alquiler de bici de carbono bajo petición ($500)."
       },
       {
         "icon": "compass",
@@ -97,7 +97,7 @@
       }
     ],
     "items": [
-      "Ver en vivo las etapas 18, 19 y 20 del TDF",
+      "Ver en vivo las etapas 17, 19 y 20 del TDF",
       "Seis días / cinco noches en el chalet privado en Oz, Auvergne-Rhône-Alpes (21 al 26 de julio)",
       "Todo el alojamiento",
       "Desayuno y cena diarios, incluidas las cenas de bienvenida y despedida",
@@ -106,13 +106,13 @@
       "Jacuzzi en el chalet disponible cada noche para recuperación y relajación",
       "Guía multilingüe durante toda la semana (español, inglés, francés e italiano)",
       "Briefings de itinerario diario y coaching de técnica, ritmo y escalada",
-      "3 recorridos guiados con archivos GPX",
+      "4 recorridos guiados con archivos GPX",
       "Snacks, nutrición energética e hidratación en todos los días de ciclismo",
       "Alquiler de bicicleta de carbono si se solicita (tarifa de alquiler USD $500); también puedes traer tu propia bici",
       "Jersey de miembro fundador de Olin",
       "Revisión de bicicleta después de cada salida con kit Wolf Tooth y Park Tools"
     ],
-    "note": "Oz es un pueblo de montaña ubicado en el corazón del macizo de Oisans, a minutos de Alpe d'Huez y de las rutas de las etapas 18, 19 y 20 de la carrera ciclista más grande del mundo. El alojamiento se compartirá en habitaciones entre 2 o 3 personas. Si deseas una habitación privada, está disponible con un costo adicional.",
+    "note": "Oz es un pueblo de montaña ubicado en el corazón del macizo de Oisans, a minutos de Alpe d'Huez y de las rutas de las etapas 17, 19 y 20 de la carrera ciclista más grande del mundo. El alojamiento se compartirá en habitaciones entre 2 o 3 personas. Si deseas una habitación privada, está disponible con un costo adicional.",
     "perk": "Además, los diez miembros fundadores obtendrán un treinta por ciento de descuento para la experiencia Olin TDF 2027.",
     "excluded": "No incluido: vuelos internacionales o trenes a Lyon. Almuerzos los días de carrera (cafés locales y puestos de comida a lo largo del recorrido)."
   },
@@ -126,13 +126,13 @@
       },
       {
         "date": "Miércoles 22 de julio",
-        "label": "La gran rodada",
-        "body": "Un día más largo y exigente en el sillín. Nos enfrentamos a los ascensos clásicos del macizo de Oisans — los puertos de montaña que el pelotón profesional recorrerá días después. Tus guías lideran el camino. La van de apoyo sigue con asistencia mecánica, snacks e hidratación. El coaching sobre ritmo y técnica de escalada está integrado en el recorrido. El jacuzzi te espera en el chalet cuando regreses."
+        "label": "Experiencia Etapa 17",
+        "body": "Pedalea desde Oz-en-Oisans para vivir la emoción que rodea la llegada de la Etapa 17 en Voiron. Disfruta de una jornada inmersa en el ambiente del Tour de Francia, rodeado de aficionados apasionados, actividades relacionadas con la carrera y la energía única que genera el Tour."
       },
       {
         "date": "Jueves 23 de julio",
-        "label": "Etapa 18 en vivo",
-        "body": "El primero de tres días consecutivos viendo el Tour de Francia en persona. Posicionamos al grupo en un punto estratégico del recorrido de la Etapa 18 para máxima atmósfera y proximidad al pelotón. Un recorrido ligero opcional sobre una sección del trayecto por la mañana te permite calentar antes de que llegue la carrera. Tu guía proporciona comentarios tácticos sobre la carrera durante todo el día."
+        "label": "Descubrimiento alpino y experiencia en viñedos",
+        "body": "Explora la belleza de los Alpes franceses a través de una ruta escénica que recorre los pueblos de montaña, caminos tranquilos y vistas inolvidables. Con opciones de recorrido y ritmo flexibles, esta jornada está diseñada para disfrutar tanto del ciclismo como del entorno. El día concluye con una visita a un viñedo local, brindando una oportunidad perfecta para relajarse y disfrutar de los sabores y tradiciones de la región."
       },
       {
         "date": "Viernes 24 de julio",

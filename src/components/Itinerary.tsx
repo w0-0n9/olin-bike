@@ -14,15 +14,15 @@ const DAY_PHOTOS = [
     src: '/images/chalet/exterior-hero.jpg',
     alt: 'Arriving at the private chalet in Oz',
   },
-  // Day 2: The big ride — Oisans massif cols
-  {
-    src: '/images/oisans-valley.jpg',
-    alt: 'The big ride — Oisans massif with valley views',
-  },
-  // Day 3: Stage 18 live — strategic viewing point, watching the peloton
+  // Day 2: Stage 17 experience — ride from Oz, finish-line atmosphere in Voiron
   {
     src: '/images/peloton.jpg',
-    alt: 'Watching the Tour de France peloton live',
+    alt: 'Watching the Stage 17 finish of the Tour de France live',
+  },
+  // Day 3: Alpine discovery & vineyard ride — scenic villages and rolling terrain
+  {
+    src: '/images/oisans-valley.jpg',
+    alt: 'A scenic alpine ride through the Oisans valley',
   },
   // Day 4: Alpe d'Huez + Stage 19 — the 21 hairpin bends
   {

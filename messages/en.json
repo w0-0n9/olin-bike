@@ -245,6 +245,7 @@
     "payDeposit": "Pay deposit",
     "securedBy": "Secured by Stripe",
     "processing": "Redirecting to payment...",
+    "stillNeeded": "Still needed before payment: {fields}",
     "consent": {
       "title": "Before you reserve, please confirm:",
       "requiredLabel": "(required)",

@@ -75,6 +75,17 @@ export function BookingForm() {
 
   const canSubmit = baseFieldsValid && allRequiredConsents && !loading;
 
+  // When the deposit button is disabled, name exactly which required fields
+  // are still empty. Without this, a missing field in the left column (e.g.
+  // jersey size) silently greys out the button with no explanation, which
+  // reads to the user as "the checkbox above won't let me continue."
+  const missingFields: string[] = [];
+  if (!name.trim()) missingFields.push(t('name'));
+  if (!email.trim()) missingFields.push(t('email'));
+  if (!jerseySize.trim()) missingFields.push(t('jerseySize'));
+  if (bikeRental && !bikeSize) missingFields.push(t('bikeSize'));
+  if (bikeRental && !pedalType) missingFields.push(t('pedalType'));
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!canSubmit) return;
@@ -576,9 +587,11 @@ export function BookingForm() {
                   {loading ? t('processing') : `${t('payDeposit')} — ${formatUSD(depositAmount)}`}
                 </button>
 
-                {baseFieldsValid && !allRequiredConsents && (
+                {!canSubmit && !loading && (
                   <p className="mt-3 text-center text-[11px] text-paper-muted">
-                    {tc('helperHint')}
+                    {missingFields.length > 0
+                      ? t('stillNeeded', { fields: missingFields.join(', ') })
+                      : tc('helperHint')}
                   </p>
                 )}
 

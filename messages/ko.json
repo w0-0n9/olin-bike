@@ -252,6 +252,7 @@
     "payDeposit": "디파짓 결제하기",
     "securedBy": "Stripe로 안전하게 결제됩니다",
     "processing": "결제 페이지로 이동 중입니다...",
+    "stillNeeded": "결제 전에 입력이 필요한 항목이 있어요: {fields}",
     "consent": {
       "title": "예약 전, 아래 내용을 확인해 주세요:",
       "requiredLabel": "(필수)",

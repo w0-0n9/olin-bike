@@ -245,6 +245,7 @@
     "payDeposit": "Pagar depósito",
     "securedBy": "Protegido por Stripe",
     "processing": "Redirigiendo al pago...",
+    "stillNeeded": "Falta completar antes de pagar: {fields}",
     "consent": {
       "title": "Antes de reservar, confirma lo siguiente:",
       "requiredLabel": "(obligatorio)",
